@@ -1,4 +1,4 @@
-This is a quick tutorial to burn on the [ESPMUSE LUXE SPEAKER](http://https://raspiaudio.com/produit/esp-muse-luxe "ESPMUSE LUXE SPEAKER") 5 to do multiroom audio. Multiroom is great at home when you want to have the same music synchronized in you living room, kitchen, bathroom without the need of moving a bluetooth speaker and a phone with you, or worst having a very loud distorted music in one room hoping to hear in every room.
+This is a quick tutorial to burn on the [ESPMUSE LUXE SPEAKER](http://https://raspiaudio.com/produit/esp-muse-luxe "ESPMUSE LUXE SPEAKER") to do multiroom audio. Multiroom is great at home when you want to have the same music synchronized in you living room, kitchen, bathroom without the need of moving a bluetooth speaker and a phone with you, or worst having a very loud distorted music in one room hoping to hear in every room.
 
 [Full tutorial could be found here](https://forum.raspiaudio.com/t/muse-luxe-speaker-with-squeezlite-logitech-media-server/300 "Full tutorial could be found here")
 
