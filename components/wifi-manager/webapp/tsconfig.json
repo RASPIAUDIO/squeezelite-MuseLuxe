@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": { "*": ["types/*"] },
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es2018",
+    "composite": true,
+//    "jsx": "react",
+    "allowJs": true
+  },
+  "exclude": [
+    "./node_modules"
+  ]
+}

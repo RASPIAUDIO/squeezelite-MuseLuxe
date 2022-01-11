@@ -1,0 +1,24 @@
+{
+	"urc": {
+		"Wifi Connection OK": 0,
+		"Wifi Failed Connect Attempt": 1,
+		"WiFi User Disconnect": 2,
+		"WiFi Lost Connection": 3
+	},
+	"bt_status": {
+		"Idle": 0,
+		"Discovering": 1,
+		"Discovered": 2,
+		"Unconnected": 3,
+		"Connecting": 4,
+		"Connected": 5,
+		"Disconnecting": 6
+	},
+	"bt_sub_status": {
+		"Default": 0,
+		"Connected - Starting": 1,
+		"Connected - Started": 2,
+		"Connected - Pause": 3,
+		"Connected - Stop": 4
+	}
+}

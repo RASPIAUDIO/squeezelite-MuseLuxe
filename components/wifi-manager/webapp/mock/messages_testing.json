@@ -1,0 +1,90 @@
+[{
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":184520,\"free_spiram\":4048492,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":3468,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":2,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	61257,
+		"current_time":	147316
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048488,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":3468,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	71255,
+		"current_time":	147317
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048492,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	81256,
+		"current_time":	147317
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048488,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	91255,
+		"current_time":	147317
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048492,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	101255,
+		"current_time":	147317
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048488,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":98,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	111255,
+		"current_time":	147318
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183992,\"free_spiram\":4048492,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	121256,
+		"current_time":	147318
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183872,\"free_spiram\":4048488,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	131255,
+		"current_time":	147318
+	}, {
+		"message":	"{\"free_iram\":190232,\"min_free_iram\":183872,\"free_spiram\":4048492,\"min_free_spiram\":4026220,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":400,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":97,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":1580,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":0,\"minstk\":708,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":3436,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	141256,
+		"current_time":	147319
+	},
+	{
+		"message":	"Info Message",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_SYSTEM",
+		"sent_time":	3519,
+		"current_time":	24674
+	},
+{
+		"message":	"Warning Message",
+		"type":	"MESSAGING_WARNING",
+		"class":	"MESSAGING_CLASS_SYSTEM",
+		"sent_time":	3519,
+		"current_time":	24674
+	},	
+{
+		"message":	"Warning Message",
+		"type":	"MESSAGING_ERROR",
+		"class":	"MESSAGING_CLASS_SYSTEM",
+		"sent_time":	3519,
+		"current_time":	24674
+	},
+	{
+		"message":	"{\"free_iram\":194144,\"min_free_iram\":185048,\"free_spiram\":4061372,\"min_free_spiram\":4050012,\"ntasks\":13,\"tasks\":[]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	11201,
+		"current_time":	24674
+	}, {
+		"message":	"{\"free_iram\":193848,\"min_free_iram\":185048,\"free_spiram\":4049576,\"min_free_spiram\":4049576,\"ntasks\":13,\"tasks\":[{\"cpu\":0,\"minstk\":480,\"bprio\":1,\"cprio\":1,\"nme\":\"Tmr Svc\",\"st\":1,\"num\":8},{\"cpu\":99,\"minstk\":1000,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE1\",\"st\":1,\"num\":7},{\"cpu\":98,\"minstk\":992,\"bprio\":0,\"cprio\":0,\"nme\":\"IDLE0\",\"st\":1,\"num\":6},{\"cpu\":0,\"minstk\":2184,\"bprio\":18,\"cprio\":18,\"nme\":\"tiT\",\"st\":2,\"num\":12},{\"cpu\":0,\"minstk\":1948,\"bprio\":5,\"cprio\":5,\"nme\":\"console\",\"st\":2,\"num\":18},{\"cpu\":0,\"minstk\":528,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc0\",\"st\":2,\"num\":2},{\"cpu\":0,\"minstk\":676,\"bprio\":20,\"cprio\":20,\"nme\":\"sys_evt\",\"st\":2,\"num\":13},{\"cpu\":0,\"minstk\":2096,\"bprio\":5,\"cprio\":5,\"nme\":\"wifi_manager\",\"st\":2,\"num\":15},{\"cpu\":0,\"minstk\":3468,\"bprio\":22,\"cprio\":22,\"nme\":\"esp_timer\",\"st\":2,\"num\":1},{\"cpu\":0,\"minstk\":2524,\"bprio\":5,\"cprio\":5,\"nme\":\"httpd\",\"st\":2,\"num\":16},{\"cpu\":1,\"minstk\":868,\"bprio\":23,\"cprio\":23,\"nme\":\"wifi\",\"st\":2,\"num\":14},{\"cpu\":0,\"minstk\":536,\"bprio\":24,\"cprio\":24,\"nme\":\"ipc1\",\"st\":2,\"num\":3},{\"cpu\":0,\"minstk\":7244,\"bprio\":1,\"cprio\":1,\"nme\":\"telnet\",\"st\":2,\"num\":17}]}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_STATS",
+		"sent_time":	21267,
+		"current_time":	24674
+	}	
+	]

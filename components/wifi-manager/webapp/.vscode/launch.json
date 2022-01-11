@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug",
+            "preLaunchTask": "webpack: dev server",
+            "sourceMaps": true,
+            "trace": true
+          }
+    ]
+}

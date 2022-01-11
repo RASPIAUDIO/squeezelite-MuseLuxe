@@ -1,0 +1,122 @@
+[% PROCESS settings/header.html %]
+
+	[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_FIRMWARE" desc="" %]
+		<div><a href="http://[% player_ip %]" target="_blank">[% "PLUGIN_SQUEEZEESP32_PLAYERSETTINGS" | string %] ([% player_ip %])</a></div>
+		[% IF fwUpdateAvailable %]
+			<div>
+				<input type="submit" name="installUpdate" class="stdclick" value="[% "CONTROLPANEL_INSTALL_UPDATE" | string %]"/>
+				[% fwUpdateAvailable %]
+			</div>
+		[% END %]
+		[% IF fwCustomUpdateAvailable %]
+			<div>
+				<input type="submit" name="installCustomUpdate" class="stdclick" value="[% "CONTROLPANEL_INSTALL_UPDATE" | string %]"/>
+				[% fwCustomUpdateAvailable | string %]
+			</div>
+		[% END %]
+	[% END %]
+
+	[% IF prefs.pref_width %]
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_WIDTH" desc="PLUGIN_SQUEEZEESP32_WIDTH_DESC" %]
+			<!--<input type="text" readonly class="stdedit" name="pref_width" id="width" value="[% prefs.pref_width %]" size="3">-->
+			<input type="hidden" name="pref_width" value="[% prefs.pref_width %]">
+			[% prefs.pref_width %]
+		[% END %]
+
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_SMALL_VU" desc="PLUGIN_SQUEEZEESP32_SMALL_VU_DESC" %]
+			<input type="number" min="10" max= "50" step="5"class="stdedit" name="pref_small_VU" id="small_VU" value="[% prefs.pref_small_VU %]" size="3">
+		[% END %]
+
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_SPECTRUM_SCALE" desc="PLUGIN_SQUEEZEESP32_SPECTRUM_SCALE_DESC" %]
+			<input type="number" min="10" max= "50" step="5" class="stdedit" name="pref_spectrum_scale" id="spectrum_scale" value="[% pref_spectrum.scale %]" size="3">
+		[% END %]
+
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM" desc="PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_DESC" %]
+			[% "PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_SIZE" | string %]&nbsp
+			<input type="number" min="10" max= "50" step="5"class="stdedit" name="pref_spectrum_small_size" id="spectrum_small_size" value="[% pref_spectrum.small.size %]" size="3">
+			[% "PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_BAND" | string %]&nbsp
+			<input type="text" class="stdedit" name="pref_spectrum_small_band" id="spectrum_small_band" value="[% pref_spectrum.small.band %]" size="3">
+		[% END %]
+
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_FULL_SPECTRUM_BAND" desc="PLUGIN_SQUEEZEESP32_FULL_SPECTRUM_BAND_DESC" %]
+			<input type="text" class="stdedit" name="pref_spectrum_full_band" id="spectrum_full_band" value="[% pref_spectrum.full.band %]" size="3">
+		[% END %]
+
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_ARTWORK" desc="PLUGIN_SQUEEZEESP32_ARTWORK_DESC" %]
+			[% "PLUGIN_SQUEEZEESP32_ARTWORK_ENABLE" | string %]&nbsp
+			<input type="checkbox" name="pref_artwork_enable" [% IF pref_artwork.enable %] checked [% END %]>&nbsp;
+			[% "PLUGIN_SQUEEZEESP32_ARTWORK_X" | string %]&nbsp
+			<input type="text" class="stdedit" name="pref_artwork_x" id="artwork_x" value="[% pref_artwork.x %]" size="2">
+			[% "PLUGIN_SQUEEZEESP32_ARTWORK_Y" | string %]&nbsp
+			<input type="text" class="stdedit" name="pref_artwork_y" id="artwork_y" value="[% pref_artwork.y %]" size="2">
+		[% END %]
+
+		<hr>
+	[% END %]
+
+	[% IF pref_equalizer %]
+		[% WRAPPER setting title="PLUGIN_SQUEEZEESP32_EQUALIZER" desc="" %]
+			<div>[% "PLUGIN_SQUEEZEESP32_EQUALIZER_SAVE" | string %]</div>
+		[% END %]
+
+		<script TYPE="text/javascript">
+			if (Ext) {
+				Ext.onReady(function () {
+					new Ext.util.TaskRunner().start({
+						run: checkEq,
+						interval: 1000
+					});
+				});
+
+				function checkEq() {
+					var eqValues = [];
+					this.lastValues = this.lastValues || [];
+
+					for (var x = 0; x < 10; x++) {
+						eqValues[x] = Ext.get('pref_equalizer.' + x).dom.value || 0;
+					}
+
+					if (eqValues.join() != this.lastValues.join()) {
+						this.lastValues = eqValues;
+						SqueezeJS.Controller.request({
+							params: ['[% playerid %]', ['squeezeesp32', 'seteq', eqValues.join()]]
+						});
+					}
+				}
+			}
+		</script>
+		[% WRAPPER settingSection %]
+			[% WRAPPER settingGroup title='31Hz' desc="" %]
+			<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.0" id="pref_equalizer.0" value="[% pref_equalizer.0 %]" size="2"">
+			[% END %]
+			[% WRAPPER settingGroup title='62Hz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.1" id="pref_equalizer.1" value="[% pref_equalizer.1 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='125Hz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.2" id="pref_equalizer.2" value="[% pref_equalizer.2 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='250Hz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.3" id="pref_equalizer.3" value="[% pref_equalizer.3 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='500Hz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.4" id="pref_equalizer.4" value="[% pref_equalizer.4 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='1kHz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.5" id="pref_equalizer.5" value="[% pref_equalizer.5 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='2kHz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.6" id="pref_equalizer.6" value="[% pref_equalizer.6 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='4kHz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.7" id="pref_equalizer.7" value="[% pref_equalizer.7 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='8kHz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.8" id="pref_equalizer.8" value="[% pref_equalizer.8 %]" size="2">
+			[% END %]
+			[% WRAPPER settingGroup title='16kHz' desc="" %]
+				<input type="text" class="stdedit sliderInput_-13_20" name="pref_equalizer.9" id="pref_equalizer.9" value="[% pref_equalizer.9 %]" size="2">
+			[% END %]
+		[% END %]
+	[% END %]
+
+[% PROCESS settings/footer.html %]

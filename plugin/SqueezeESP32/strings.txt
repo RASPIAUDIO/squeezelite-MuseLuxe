@@ -1,0 +1,115 @@
+WELCOME_TO_SQUEEZEESP32
+	DE	Willkommen bei SqueezeESP32!
+	EN	Welcome to SqueezeESP32
+
+PLUGIN_SQUEEZEESP32
+	EN	SqueezeESP32
+
+PLUGIN_SQUEEZEESP32_BANNER
+	DE	WARNUNG
+	EN	WARNING
+
+PLUGIN_SQUEEZEESP32_BANNER_TEXT
+	DE	Sie müssen LMS neu starten, damit diese Einstellungen aktiv werden
+	EN	You need to restart LMS for these parameters to be taken into account
+
+PLUGIN_SQUEEZEESP32_DESC
+	DE	Konfiguriert eine neue Player ID (100), um Displays an SqueezeESP32 zu unterstützen
+	EN	Adds a new player id (100) to enable display with SqueezeESP32
+
+PLUGIN_SQUEEZEESP32_PLAYERSETTINGS
+	DE	ESP32 Einstellungen
+	EN	ESP32 settings
+
+PLUGIN_SQUEEZEESP32_FIRMWARE
+	EN	Firmware
+
+PLUGIN_SQUEEZEESP32_FIRMWARE_AVAILABLE
+	DE	Es steht eine neue Firmware Version v%s zur Verfügung (aktuell installiert: v%s).
+	EN	A new firmware version v%s is available (currently installed: v%s).
+
+PLUGIN_SQUEEZEESP32_CUSTOM_FIRMWARE_AVAILABLE
+	DE	Es steht eine benutzerdefinierte Firmware Version zur Verfügung.
+	EN	A custom firmware image is available for installation.
+
+PLUGIN_SQUEEZEESP32_WIDTH
+	DE	Displaybreite
+	EN	Screen width
+
+PLUGIN_SQUEEZEESP32_WIDTH_DESC
+	DE	Breite des Displays in Pixeln, wie es vom Player angegeben wird
+	EN	Width of the display in pixel as reported by the player
+
+PLUGIN_SQUEEZEESP32_SMALL_VU
+	DE	Kleine VU Grösse
+	EN	Small VU size
+
+PLUGIN_SQUEEZEESP32_SMALL_VU_DESC
+	DE	Prozentsatz des Displays, das für den kleinen VU verwendet wird (rechts ausgerichtet)
+	EN	% of the display used for small VU (right-justified)
+
+PLUGIN_SQUEEZEESP32_SPECTRUM_SCALE
+	DE	Spektrum-Skalierung
+	EN	Spectrum scaling
+
+PLUGIN_SQUEEZEESP32_SPECTRUM_SCALE_DESC
+	DE	Prozentsatz des Spektrums, das in der ersten Hälfte des Bildschirms angezeigt wird. Z.B. 50 bedeutet 50% des Spektrums wird auf dem halben Bildschirm angezeigt.
+	DE	Aber 25 bedeutet, dass nur 25% des Spektrums auf dem halben Bildschirm angezeigt wird.
+	EN	% of Spectrum displayed in first half of the screen. For example, 50 means that 50% of spectrum is displayed in 1/2 of the screen
+	EN	But 25 means that only 25% of spectrum is displayed in 1/2 of the screen, so it's a sort of log
+
+PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM
+	DE	Kleines Spektrum
+	EN	Small spectrum options
+
+PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_DESC
+	DE	<i>Grösse</i>: Prozentsatz des Displays, das für das kleine Spektrum verwendet wird.
+	DE	<br><i>Band-Faktor</i>: die Anzahl Bänder ist die Breite der <b>Spektrumsanzeige</b> dividiert durch diesen Faktor.
+	EN	<i>Size</i>: % of the screen used by small spectrum
+	EN	<br><i>Band factor</i>: number of bands is the width of the <b>spectrum</b> screen  divided by this factor
+
+PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_SIZE
+	DE	Grösse
+	EN	Size
+
+PLUGIN_SQUEEZEESP32_SMALL_SPECTRUM_BAND
+	DE	Band-Faktor
+	EN	Band factor
+
+PLUGIN_SQUEEZEESP32_FULL_SPECTRUM_BAND
+	DE	Band-Faktor für ganzes Spektrum
+	EN	Full spectrum band factor
+
+PLUGIN_SQUEEZEESP32_FULL_SPECTRUM_BAND_DESC
+	DE	Die Anzahl Bänder ist die Breite der Anzeige dividiert durch diesen Faktor.
+	EN	The number of bands is the width of the screen divided by this factor
+
+PLUGIN_SQUEEZEESP32_ARTWORK
+	DE	Plattenhüllen
+	EN	Artwork
+
+PLUGIN_SQUEEZEESP32_ARTWORK_DESC
+	DE	Wenn die Y Position kleiner als 32 ist, dann werden Plattenhüllen auf der rechten Seite angezeigt, und x definiert die Startposition.
+	DE	Plattenhüllen werden auf Displays mit weniger als 16 Graustufen in sehr geringer Qualität angezeigt.
+	EN	When Y position is less than 32, then artwork is displayed at the right of the main screen and X defines the starting position
+	EN	<br>On large screen, it's possible to rotate the VU/Spectrum by setting a small X offset (typically 32). That will push the 
+	EN	artwork to the right and make space for a vertical VU to its left.
+	EN	<br>Note that using artwork on less than 16-levels grayscale display if really poor quality
+
+PLUGIN_SQUEEZEESP32_ARTWORK_ENABLE
+	DE	Aktivieren
+	EN	Enable
+
+PLUGIN_SQUEEZEESP32_ARTWORK_X
+	EN	X
+
+PLUGIN_SQUEEZEESP32_ARTWORK_Y
+	EN	Y
+
+PLUGIN_SQUEEZEESP32_EQUALIZER
+	DE	Grafischer Equalizer
+	EN	Graphic equalizer
+
+PLUGIN_SQUEEZEESP32_EQUALIZER_SAVE
+	DE	Bitte speichern Sie die Equalizer Einstellungen, falls das Gerät diese dauerhaft verwenden soll. Ansonsten werden sie beim nächsten Start zurückgesetzt.
+	EN	Don't forget to save the Equalizer settings if you want them to stick. Otherwise they'll be reset next time you restart the device.

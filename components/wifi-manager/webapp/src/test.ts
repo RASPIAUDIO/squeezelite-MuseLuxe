@@ -1,0 +1,23 @@
+import 'bootstrap';
+import '../src/sass/main.scss';
+import './js/test.js';
+import '../node_modules/remixicon/icons/Device/signal-wifi-fill.svg';
+import '../node_modules/remixicon/icons/Device/signal-wifi-3-fill.svg';
+import '../node_modules/remixicon/icons/Device/signal-wifi-2-fill.svg';
+import '../node_modules/remixicon/icons/Device/signal-wifi-1-fill.svg';
+import '../node_modules/remixicon/icons/Device/signal-wifi-line.svg';
+import '../node_modules/remixicon/icons/Device/battery-line.svg';
+import '../node_modules/remixicon/icons/Device/battery-low-line.svg';
+import '../node_modules/remixicon/icons/Device/battery-fill.svg';
+
+import '../node_modules/remixicon/icons/Media/headphone-fill.svg';
+import '../node_modules/remixicon/icons/Device/device-recover-fill.svg';
+import '../node_modules/remixicon/icons/Device/bluetooth-fill.svg';
+import '../node_modules/remixicon/icons/Device/bluetooth-connect-fill.svg';
+import '../node_modules/remixicon/icons/Media/stop-circle-fill.svg';
+import '../node_modules/remixicon/icons/Media/stop-circle-line.svg';
+import '../node_modules/remixicon/icons/Logos/google-play-fill.svg';
+import '../node_modules/remixicon/icons/Media/pause-fill.svg';
+import '../node_modules/remixicon/icons/Media/stop-fill.svg';
+import '../node_modules/remixicon/icons/System/lock-fill.svg';
+import '../node_modules/remixicon/icons/System/lock-unlock-fill.svg';

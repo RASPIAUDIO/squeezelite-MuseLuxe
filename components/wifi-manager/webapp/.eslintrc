@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  }  ,
+  "rules": {
+    "no-tabs": "off",
+    "semi": 0,
+    "comma-dangle": 0,
+    "require-jsdoc": ["off", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": false,
+        "ClassDeclaration": false
+      }
+    }]
+  }
+}

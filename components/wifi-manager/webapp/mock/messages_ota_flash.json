@@ -1,0 +1,117 @@
+[
+	{
+		"message":	"{\"ota_dsc\":\"Initializing...\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	14110,
+		"current_time":	16958
+	}, {
+		"message":	"{\"ota_dsc\":\"Starting OTA...\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	14146,
+		"current_time":	16958
+	}, {
+		"message":	"{\"ota_dsc\":\"New version is : mock version \",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	18849,
+		"current_time":	22220
+	}, {
+		"message":	"{\"ota_dsc\":\"Formatting OTA partition\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	18850,
+		"current_time":	22220
+	}, {
+		"message":	"{\"ota_dsc\":\"Erasing flash (1/11)\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	22217,
+		"current_time":	22220
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Erasing flash (5/11)\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	29896,
+		"current_time":	29902
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Erasing flash (7/11)\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	33395,
+		"current_time":	33408
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Erasing flash (9/11)\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	36843,
+		"current_time":	54597
+	}, {
+		"message":	"{\"ota_dsc\":\"Erasing flash complete.\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	39463,
+		"current_time":	54597
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":5}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	41862,
+		"current_time":	54597
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":25}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	50307,
+		"current_time":	54598
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":30}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	52455,
+		"current_time":	54598
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":35}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	54603,
+		"current_time":	65184
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":55}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	63042,
+		"current_time":	65185
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":60}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	65190,
+		"current_time":	77858
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":95}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	80010,
+		"current_time":	82592
+	}, {
+		"message":	"{\"ota_dsc\":\"Writing binary file\",\"ota_pct\":100}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	82084,
+		"current_time":	82592
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Success!\",\"ota_pct\":100}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	119255,
+		"current_time":	121838
+	}
+	]

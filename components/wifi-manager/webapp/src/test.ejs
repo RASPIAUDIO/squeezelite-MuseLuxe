@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>esp32-wifi-manager testing</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+
+</head>
+
+<body>
+
+    <div style="display:none">
+        <% if (htmlWebpackPlugin.files.sprites) { %>
+            <% for (var spriteFileName in htmlWebpackPlugin.files.sprites) { %>
+                <%= htmlWebpackPlugin.files.sprites[spriteFileName] %>
+                    <% } %>
+                        <% } %>
+    </div>
+    <div id="allIcons"></div>
+    
+    <div class="card border-primary mb-3">
+        <div class="card-header">Status Variables</div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Variable</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody id="valuesTable">
+                </tbody>
+            </table>
+            <input id="save_status" type="button" class="btn btn-success" value="Commit">
+
+        </div>
+    </div>
+
+
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">BT State</th>
+                    <th scope="col">Sub state #</th>
+                    <th scope="col">Sub state</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Idle</td>
+                    <td>0</td>
+                    <td>bt_neutral</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Discovering</td>
+                    <td>0</td>
+                    <td>bt_searching</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Discovered</td>
+                    <td>0</td>
+                    <td>bt_searching</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Unconnected</td>
+                    <td>0</td>
+                    <td>bt_disabled</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Connecting</td>
+                    <td>0</td>
+                    <td>bt_disabled</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Connected</td>
+                    <td>0</td>
+                    <td>bt_connected</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>play_circle_outline</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>bt_playing</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>pause</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td>stop</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Disconnecting</td>
+                    <td>0</td>
+                    <td>bt_neutral</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

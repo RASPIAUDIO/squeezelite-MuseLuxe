@@ -1,0 +1,617 @@
+{
+	"commands":	[{
+			"help":	"WiFi",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"Fast|Comprehensive",
+					"glossary":	"Sets the WiFi Scan Mode. Use Comprehensive where more than one AP has the same name on different channels. This will ensure that the AP with the strongest signal is chosen.",
+					"longopts":	"scanmode",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [--scanmode=Fast|Comprehensive]",
+			"name":	"cfg-syst-wifi"
+		}, {
+			"help":	"Get the current size of free heap memory",
+			"hascb":	false,
+			"name":	"free"
+		}, {
+			"help":	"Services",
+			"hascb":	true,
+			"argtable":	[{
+					"glossary":	"Bluetooth Speaker",
+					"longopts":	"BT_Speaker",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"AirPlay",
+					"longopts":	"AirPlay",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"Disabled|Telnet Only|Telnet and Serial",
+					"glossary":	"Telnet server. Use only for troubleshooting",
+					"longopts":	"telnet",
+					"shortopts":	"t",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [--BT_Speaker] [--AirPlay] [-t Disabled|Telnet Only|Telnet and Serial]",
+			"name":	"cfg-syst-services"
+		}, {
+			"help":	"Get minimum size of free heap memory found during execution",
+			"hascb":	false,
+			"name":	"heap"
+		}, {
+			"help":	"Device Name",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"Bureau-OLED",
+					"glossary":	"New Name",
+					"longopts":	"name",
+					"shortopts":	"n",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [-n Bureau-OLED]",
+			"name":	"cfg-syst-name"
+		}, {
+			"help":	"Get version of chip and SDK",
+			"hascb":	false,
+			"name":	"version"
+		}, {
+			"help":	"Reboot system",
+			"hascb":	false,
+			"name":	"restart"
+		}, {
+			"help":	"Reboot system to Recovery",
+			"hascb":	false,
+			"name":	"recovery"
+		}, {
+			"help":	"Reboot system to Squeezelite",
+			"hascb":	false,
+			"name":	"restart_ota"
+		}, {
+			"help":	"General Audio Options",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"Headphones|Subwoofer",
+					"glossary":	"On supported DAC, determines the audio jack behavior. Selecting headphones will cause the external amp to be muted on insert, while selecting Subwoofer will keep the amp active all the time.",
+					"longopts":	"jack_behavior",
+					"shortopts":	"j",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [-j Headphones|Subwoofer]",
+			"name":	"cfg-audio-general"
+		}, {
+			"help":	"Bluetooth Audio Output Options",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"name",
+					"glossary":	"Bluetooth audio device name. This applies when output mode is Bluetooth",
+					"longopts":	"sink_name",
+					"shortopts":	"n",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"pin",
+					"glossary":	"Bluetooth security/pin code. Usually 0000. This applies when output mode is Bluetooth",
+					"longopts":	"pin_code",
+					"shortopts":	"p",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}],
+			"hint":	" -n name -p pin",
+			"name":	"cfg-audio-bt_source"
+		}, {
+			"help":	"DAC Options",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"TAS57xx|TAS5713|AC101|WM8978|I2S",
+					"glossary":	"DAC Model Name",
+					"longopts":	"model_name",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Clock GPIO. e.g. 33",
+					"longopts":	"clock",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Word Select GPIO. e.g. 25",
+					"longopts":	"wordselect",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Data GPIO. e.g. 32",
+					"longopts":	"data",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Mute GPIO. e.g. 14",
+					"longopts":	"mute_gpio",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Mute GPIO level. Checked=HIGH, Unchecked=LOW",
+					"longopts":	"mute_level",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SDA GPIO. e.g. 27",
+					"longopts":	"dac_sda",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SCL GPIO. e.g. 26",
+					"longopts":	"dac_scl",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"I2C device address. e.g. 106",
+					"longopts":	"dac_i2c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Clear configuration",
+					"longopts":	"clear",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" --model_name=TAS57xx|TAS5713|AC101|WM8978|I2S --clock=<n> --wordselect=<n> --data=<n> [--mute_gpio=<n>] [--mute_level] [--dac_sda=<n>] [--dac_scl=<n>] [--dac_i2c=<n>] [--clear]",
+			"name":	"cfg-hw-dac"
+		}, {
+			"help":	"SPDIF Options",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"<n>",
+					"glossary":	"Clock GPIO. e.g. 33",
+					"longopts":	"clock",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Word Select GPIO. e.g. 25",
+					"longopts":	"wordselect",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Data GPIO. e.g. 32",
+					"longopts":	"data",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"glossary":	"Clear configuration",
+					"longopts":	"clear",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" --clock=<n> --wordselect=<n> --data=<n> [--clear]",
+			"name":	"cfg-hw-spdif"
+		}, {
+			"help":	"I2C Bus Parameters",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"0|1",
+					"glossary":	"Port",
+					"longopts":	"port",
+					"shortopts":	"p",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"int",
+					"glossary":	"Frequency (Hz) e.g. 100000",
+					"longopts":	"speed",
+					"shortopts":	"f",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SDA GPIO. e.g. 19",
+					"longopts":	"sda",
+					"shortopts":	"d",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SCL GPIO. e.g. 18",
+					"longopts":	"scl",
+					"shortopts":	"c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Clear configuration",
+					"longopts":	"clear",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [-p 0|1] [-f int] [-d <n>] [-c <n>] [--clear]",
+			"name":	"cfg-hw-i2c"
+		}, {
+			"help":	"SPI Bus Parameters",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"<n>",
+					"glossary":	"Data GPIO",
+					"longopts":	"data",
+					"shortopts":	"d",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Clock GPIO",
+					"longopts":	"clk",
+					"shortopts":	"k",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"DC GPIO",
+					"longopts":	"dc",
+					"shortopts":	"c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"1|2",
+					"glossary":	"SPI Host Number",
+					"longopts":	"host",
+					"shortopts":	"h",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Clear configuration",
+					"longopts":	"clear",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [-d <n>] [-k <n>] [-c <n>] [-h 1|2] [--clear]",
+			"name":	"cfg-hw-spi"
+		}, {
+			"help":	"Scan I2C bus for devices",
+			"hascb":	false,
+			"name":	"i2cdetect"
+		}, {
+			"help":	"Read registers visible through the I2C bus",
+			"hascb":	false,
+			"argtable":	[{
+					"datatype":	"<chip_addr>",
+					"glossary":	"Specify the address of the chip on that bus",
+					"longopts":	"chip",
+					"shortopts":	"c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<register_addr>",
+					"glossary":	"Specify the address on that chip to read from",
+					"longopts":	"register",
+					"shortopts":	"r",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<length>",
+					"glossary":	"Specify the length to read from that data address",
+					"longopts":	"length",
+					"shortopts":	"l",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" -c <chip_addr> [-r <register_addr>] [-l <length>]",
+			"name":	"i2cget"
+		}, {
+			"help":	"Set registers visible through the I2C bus",
+			"hascb":	false,
+			"argtable":	[{
+					"datatype":	"<chip_addr>",
+					"glossary":	"Specify the address of the chip on that bus",
+					"longopts":	"chip",
+					"shortopts":	"c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Specify the i2c port (0|2)",
+					"longopts":	"port",
+					"shortopts":	"p",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<register_addr>",
+					"glossary":	"Specify the address on that chip to read from",
+					"longopts":	"register",
+					"shortopts":	"r",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<data>",
+					"glossary":	"Specify the data to write to that data address",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	256
+				}],
+			"hint":	" -c <chip_addr> [-p <n>] [-r <register_addr>] [<data>]...",
+			"name":	"i2cset"
+		}, {
+			"help":	"Examine registers visible through the I2C bus",
+			"hascb":	false,
+			"argtable":	[{
+					"datatype":	"<chip_addr>",
+					"glossary":	"Specify the address of the chip on that bus",
+					"longopts":	"chip",
+					"shortopts":	"c",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<size>",
+					"glossary":	"Specify the size of each read",
+					"longopts":	"size",
+					"shortopts":	"s",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" -c <chip_addr> [-s <size>]",
+			"name":	"i2cdump"
+		}, {
+			"help":	"Display",
+			"hascb":	true,
+			"argtable":	[{
+					"datatype":	"<I2C|SPI>",
+					"glossary":	"Interface (default I2C)",
+					"longopts":	"type",
+					"shortopts":	"t",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<SH1106|SSD1306|SSD1322|SSD1326|SSD1327|SSD1675|SSD1351|ST7735|ST7789|ILI9341|>",
+					"glossary":	"Driver",
+					"longopts":	"driver",
+					"shortopts":	"d",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"1|4",
+					"glossary":	"Bit Depth (only for SSD1326 displays)",
+					"longopts":	"depth",
+					"shortopts":	"p",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"I2C address (default 60)",
+					"longopts":	"address",
+					"shortopts":	"a",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Width",
+					"longopts":	"width",
+					"shortopts":	"w",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Height",
+					"longopts":	"height",
+					"shortopts":	"h",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	1,
+					"maxcount":	1
+				}, {
+					"glossary":	"Rotate 180 degrees",
+					"longopts":	"rotate",
+					"shortopts":	"r",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Flip horizontally",
+					"longopts":	"hf",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"Flip vertically",
+					"longopts":	"vf",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SPI Only. Bus Speed (Default 8000000). SPI interface can work up to 26MHz~40MHz",
+					"longopts":	"speed",
+					"shortopts":	"s",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"SPI Only. CS GPIO (for SPI displays)",
+					"longopts":	"cs",
+					"shortopts":	"b",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Backlight GPIO (if applicable)",
+					"longopts":	"back",
+					"shortopts":	"b",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"datatype":	"<n>",
+					"glossary":	"Reset GPIO",
+					"longopts":	"reset",
+					"checkbox":	false,
+					"hasvalue":	true,
+					"mincount":	0,
+					"maxcount":	1
+				}, {
+					"glossary":	"clear configuration and return",
+					"longopts":	"clear",
+					"checkbox":	true,
+					"hasvalue":	false,
+					"mincount":	0,
+					"maxcount":	1
+				}],
+			"hint":	" [-r] [-t <I2C|SPI>] [-d <SH1106|SSD1306|SSD1322|SSD1326|SSD1327|SSD1675|SSD1351|ST7735|ST7789|ILI9341|>] [-p 1|4] [-a <n>] -w <n> -h <n> [--hf] [--vf] [-s <n>] [-b <n>] [-b <n>] [--reset=<n>] [--clear]",
+			"name":	"cfg-hw-display"
+		}],
+	"values":	{
+		"cfg-syst-wifi":	{
+			"scanmode":	"Fast"
+		},
+		"cfg-syst-services":	{
+			"BT_Speaker":	true,
+			"AirPlay":	true,
+			"telnet":	"Telnet Only"
+		},
+		"cfg-syst-name":	{
+			"name":	"Bureau-OLED"
+		},
+		"cfg-audio-general":	{
+			"jack_behavior":	"Subwoofer"
+		},
+		"cfg-audio-bt_source":	{
+			"sink_name":	"SMSL BT4.2",
+			"pin_code":	"0000"
+		},
+		"cfg-hw-dac":	{
+			"clock":	33,
+			"wordselect":	25,
+			"data":	32,
+			"model_name":	"I2S"
+		},
+		"cfg-hw-spdif":	{
+		},
+		"cfg-hw-i2c":	{
+			"speed":	400000
+		},
+		"cfg-hw-spi":	{
+			"data":	4,
+			"clk":	5,
+			"dc":	18,
+			"host":	1
+		},
+		"cfg-hw-display":	{
+			"width":	256,
+			"height":	64,
+			"reset":	21,
+			"driver":	"SSD1322",
+			"cs":	19,
+			"speed":	16000000,
+			"type":	"SPI",
+			"rotate":	false,
+			"hf":	false,
+			"vf":	false
+		}
+	}
+}

@@ -1,0 +1,69 @@
+espcoredump.py info_corefile -t b64 -c </path/to/saved/base64/text> </path/to/program/elf/file>
+
+LWIP
+Enable Copy between L2 and L3 no (no)
+Default receive window size 32768 (5740)
+Default transmit window size 8192 (5740)
+TCP:Default TCP receive mail box size 32 (6)
+
+WiFi
+Max number of WiFi static RX buffer 12-16 (6)
+Max number of WiFi dynamic buffer 24-64 (16 or 10)
+Max number of WiFi static TX buffer 12-16 (6)
+
+i2C
+i2cconfig  --port=0 --sda=27 --scl=26
+
+
+SPI RAM
+Maximum malloc() to always put in internal memory 512 (2048)
+
+MBED_TLS
+Memory allocation strategy: external
+
+Put .bss in SPIRAM?
+
+# WiFi
+nvs_set autoexec1 str -v "join <SSID> <password>"
+# enable
+nvs_set autoexec u8 -v 1		
+
+nvs_set autoexec2 str -v "squeezelite -o \"BT -n 'RIVAARENA'\" -b 500:2000 -d all=info -BT -R -Z 96000 -r \"44100-44100\" -e flac"
+nvs_set autoexec2 str -v "squeezelite -o \"BT -n 'RIVAARENA'\" -b 500:2000 -d all=info -BT -R -Z 96000 -r \"44100-44100\""
+nvs_set autoexec2 str -v "squeezelite -o \"BT -n 'RIVAARENA'\" -b 500:2000 -d all=info -R -Z 96000 -r \"44100-44100\""
+nvs_set autoexec2 str -v "squeezelite -o \"BT -n 'RIVAARENA'\" -b 500:2000 -d all=info -BT -R -u m -Z 192000 -r \"44100-44100\" -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o \"BT -n 'RIVAARENA'\" -b 500:2000 -d all=info -BT -r \"44100-44100\" -e flac"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d all=info  -R -Z 96000 -r \"44100-44100\" -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d all=info  -R -Z 96000 -r \"96000-96000\" -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d all=info  -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d all=info"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d all=info  -s 192.168.2.10"
+nvs_set autoexec2 str -v "squeezelite -o I2S -b 500:2000 -d decode=info  -s 192.168.2.144"
+nvs_set autoexec2 str -v "squeezelite -o SPDIF -b 500:2000 -d all=info "
+
+nvs_set autoexec1 str -v "squeezelite -o I2S -b 500:2000 -d all=info  -s 192.168.2.144"
+nvs_set autoexec1 str -v "squeezelite -o SPDIF -b 500:2000 -d all=info  -s 192.168.2.144"
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=armhf] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+
+
+# Build recovery.bin, bootloader.bin, ota_data_initial.bin, partitions.bin  
+# force appropriate rebuild by touching all the files which may have a RECOVERY_APPLICATION specific source compile logic
+	find . \( -name "*.cpp" -o -name "*.c" -o -name "*.h" \) -type f -print0 | xargs -0 grep -l "RECOVERY_APPLICATION" | xargs touch
+	export PROJECT_NAME="recovery" 
+	make -j4 all EXTRA_CPPFLAGS='-DRECOVERY_APPLICATION=1'
+make flash
+#
+# Build squeezelite.bin
+# Now force a rebuild by touching all the files which may have a RECOVERY_APPLICATION specific source compile logic
+find . \( -name "*.cpp" -o -name "*.c" -o -name "*.h" \) -type f -print0 | xargs -0 grep -l "RECOVERY_APPLICATION" | xargs touch
+export PROJECT_NAME="squeezelite" 
+make -j4 app EXTRA_CPPFLAGS='-DRECOVERY_APPLICATION=0'
+python  ${IDF_PATH}/components/esptool_py/esptool/esptool.py --chip esp32 --port ${ESPPORT} --baud 2000000 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size detect 0x150000 ./build/squeezelite.bin  
+# monitor serial output
+make monitor

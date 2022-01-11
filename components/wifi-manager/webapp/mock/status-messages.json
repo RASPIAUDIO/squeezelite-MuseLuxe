@@ -1,0 +1,16 @@
+{
+    "project_name": "recovery",
+    "version": "custom.build",
+    "recovery": 1,
+    "Jack": "1",
+    "Voltage": 0,
+    "disconnect_count": 0,
+    "avg_conn_time": 0,
+    "is_i2c_locked": false,
+    "urc": 0,
+    "bt_status": 0,
+    "ssid": "MyTestSSID",
+    "ip": "192.168.10.225",
+    "netmask": "255.255.255.0",
+    "gw": "192.168.10.1"
+}

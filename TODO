@@ -1,0 +1,5 @@
+- in squeezelite some buffers (stream, output, header, recv) are allocated 
+although they are almost static (expect output). This creates a risk of 
+memory fragmentation, especially because the large output is re-allocated for
+AirPlay
+- libflac in lpc.c can be unrolled - that gains 43k of code, at the expense of 4% CPU

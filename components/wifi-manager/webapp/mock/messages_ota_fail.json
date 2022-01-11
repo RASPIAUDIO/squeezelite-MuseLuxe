@@ -1,0 +1,21 @@
+[{
+		"message":	"{\"ota_dsc\":\"Initializing...\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	119203,
+		"current_time":	121837
+	}, {
+		"message":	"{\"ota_dsc\":\"Starting OTA...\",\"ota_pct\":0}",
+		"type":	"MESSAGING_INFO",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	119255,
+		"current_time":	121838
+	},
+	{
+		"message":	"{\"ota_dsc\":\"Error: Failed to execute HTTP download. ERROR\",\"ota_pct\":0}",
+		"type":	"MESSAGING_ERROR",
+		"class":	"MESSAGING_CLASS_OTA",
+		"sent_time":	121954,
+		"current_time":	124911
+	}
+	]

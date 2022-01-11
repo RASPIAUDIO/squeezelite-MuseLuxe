@@ -1,0 +1,413 @@
+menu "Squeezelite-ESP32"
+	menu "Logging"
+		config LOGGING_SLIMPROTO
+        	string "logging level for slimproto "
+        	default "info"
+        	help
+        		Set logging level info|debug|sdebug
+		config LOGGING_STREAM
+        	string "logging level for stream "
+        	default "info"
+        	help
+        		Set logging level info|debug|sdebug
+   		config LOGGING_DECODE
+        	string "logging level for decode"
+        	default "info"
+        	help
+        		Set logging level info|debug|sdebug 	
+   		config LOGGING_OUTPUT
+        	string "logging level for output"
+        	default "info"
+        	help
+        		Set logging level info|debug|sdebug 	
+	endmenu
+	config JACK_LOCKED
+		bool
+	config BAT_LOCKED	
+		bool
+	config I2C_LOCKED
+		bool
+	config SPDIF_LOCKED
+		bool		
+	config LED_LOCKED
+		bool				
+	config SPKFAULT_LOCKED
+		bool				
+	config MUTE_GPIO_LEVEL
+		int 
+		default 0
+	menu "Target"
+		choice OUTPUT_TYPE
+			prompt "Main system"
+			   default BASIC_I2C_BT
+			   help
+				   Type of hardware platform
+			config SQUEEZEAMP 
+				bool "SqueezeAMP"
+				select JACK_LOCKED
+				select BAT_LOCKED
+				select I2C_LOCKED
+				select LED_LOCKED
+				select SPKFAULT_LOCKED
+			config BASIC_I2C_BT
+				bool "Generic I2S & Bluetooth"				
+			config TWATCH2020	
+				bool "T-WATCH2020 by LilyGo"				
+				select I2C_LOCKED				
+		endchoice	
+		config RELEASE_API
+        	string "Software update URL"
+			default "https://api.github.com/repos/sle118/squeezelite-esp32/releases"
+        	help
+        		Set the URL of the API that the front-end UI will use to fetch software updates 
+		config SQUEEZELITE_ESP32_RELEASE_URL
+			string "Release URL"
+			default "https://github.com/sle118/squeezelite-esp32/releases"
+			help
+				Set the URL where users can see a list of releases
+		# you can't change default values once they are set so changing "Target" will not reset
+		# project name if they are visible config - they have to be silent strings	
+		config PROJECT_NAME
+			string
+			default "SqueezeAMP" if SQUEEZEAMP
+			default "Squeezelite-TWATCH" if TWATCH2020
+			default "Squeezelite-ESP32"
+		config FW_PLATFORM_NAME
+			string 
+			default "SqueezeAmp" if SQUEEZEAMP
+			default "TWATCH" if TWATCH2020
+			default "ESP32"
+		# AGGREGATES - begin
+		# these parameters are "aggregates"	that take precedence. They must have a default value	
+		config DAC_CONFIG
+			string 
+			default "model=TAS57xx,bck=33,ws=25,do=32,sda=27,scl=26,mute=14:0" if SQUEEZEAMP
+			default "model=I2S,bck=26,ws=25,do=33,i2c=53,sda=21,scl=22" if TWATCH2020
+			default ""
+		config SPDIF_CONFIG		
+			string
+			default "bck=33,ws=25,do=15" if SQUEEZEAMP
+			default	""
+		config GPIO_EXP_CONFIG		
+			string
+			default	""
+		config SPI_CONFIG
+			string
+			default "dc=27,data=19,clk=18" if TWATCH2020		
+			default	""
+		config DISPLAY_CONFIG
+			string
+			default "SPI,driver=ST7789,width=240,height=240,cs=5,back=12,speed=16000000,HFlip,VFlip" if TWATCH2020
+			default ""
+		config ETH_CONFIG
+			string
+			default ""
+		config DAC_CONTROLSET
+			string
+			default "{ \"init\": [ {\"reg\":41, \"val\":128}, {\"reg\":18, \"val\":255} ], \"poweron\": [ {\"reg\":18, \"val\":64, \"mode\":\"or\"} ], \"poweroff\": [ {\"reg\":18, \"val\":191, \"mode\":\"and\"} ] }" if TWATCH2020
+			default ""		
+		# AGGREGATES - end				
+	endmenu
+
+	menu "Ethernet Options"
+		visible if BASIC_I2C_BT && (ETH_USE_ESP32_EMAC || ETH_USE_SPI_ETHERNET)
+		choice 
+			prompt "Ethernet Chipset"
+			default ETH_NODRIVER
+			config ETH_NODRIVER
+				bool "Defined in NVS"			   
+			config ETH_LAN8720
+				bool "Microchip LAN8720 (RMII)"
+			config ETH_DM9051
+				bool "Davicom 9051 (SPI)"				
+		endchoice	
+		config ETH_PHY_RST_IO
+			int "PHY Reset GPIO number" if !ETH_NODRIVER
+			default -1
+			help
+				Set the GPIO number used to reset PHY chip.
+				Set to -1 to disable PHY chip hardware reset.		
+		config ETH_MDC_IO
+			int "SMI MDC GPIO number" if ETH_LAN8720
+			default -1
+			help
+				Set the GPIO number used by SMI MDC.		
+		config ETH_MDIO_IO
+			int "SMI MDIO GPIO number" if ETH_LAN8720
+			default -1
+			help
+				Set the GPIO number used by SMI MDIO.		
+		config ETH_SPI_HOST
+			int "SPI host number (-1,1 or 2)" if ETH_DM9051
+			default -1
+			help
+				Set to -1 to use system's SPI config (see Various I/O)
+				Set to 2 or 3 to use a dedicated bus 
+		config ETH_SPI_INTR_IO
+			int "interrupt" if ETH_DM9051
+			default -1													
+		config ETH_SPI_CS_IO
+			int "Chip Select" if ETH_DM9051
+			default -1								
+		config ETH_SPI_CLK_IO
+			int "SPI clock" if ETH_SPI_HOST != -1 && ETH_DM9051
+			default -1
+		config ETH_SPI_MOSI_IO
+			int "Data Out" if ETH_SPI_HOST != -1 && ETH_DM9051
+			default -1				
+		config ETH_SPI_MISO_IO
+			int "Data In"  if ETH_SPI_HOST != -1 && ETH_DM9051
+			default -1
+		config ETH_SPI_SPEED
+			int "SPI speed (Hz)" if ETH_SPI_HOST != -1 && ETH_DM9051
+			default 20000000
+	endmenu
+	
+	menu "Audio settings"
+		menu "DAC settings" 
+			visible if BASIC_I2C_BT
+			menu "I2S settings"
+				config I2S_NUM         
+					int "I2S channel (0 or 1). "
+					default 0
+					help
+						I2S dma channel to use.  
+				config I2S_BCK_IO         
+					int "I2S Bit clock GPIO number. "
+					default -1 
+					help
+						I2S Bit Clock gpio pin to use.  
+				config I2S_WS_IO         
+					int "I2S Word Select GPIO number. "
+					default -1 
+					help
+						I2S Word Select gpio pin to use.
+				config I2S_DO_IO         
+					int "I2S Data Output GPIO number. "
+					default -1
+					help
+						I2S data output gpio pin to use.
+				config I2S_DI_IO         
+					int "I2S Data Input GPIO number. "
+					default -1
+					help
+						I2S data input gpio pin to use (not used mostly, leave it to -1).					
+			endmenu
+			menu "I2C settings"	
+				config I2C_SDA
+					int "I2C SDA GPIO number for DAC control. "
+					default -1
+					help
+						I2C data gpio pin to use with DAC (not used mostly, leave it to -1).										
+				config I2C_SCL
+					int "I2C SCL GPIO number for DAC control. "
+					default -1
+					help
+						I2C clock gpio pin to use with DAC (not used mostly, leave it to -1).															
+			endmenu		
+			config MUTE_GPIO
+				int "GPIO for muting DAC"
+				default -1 
+				help
+					GPIO used to mute DAC (not used mostly, leave it to -1).															
+			config MUTE_GPIO_LEVEL
+				int "Mute GPIO active level"
+				depends on MUTE_GPIO != -1
+				default 1 					
+		endmenu
+		
+		menu "SPDIF settings" 
+			visible if BASIC_I2C_BT
+		    config SDIF_NUM         
+		        int "I2S channel for SDPIF (0 or 1)"
+		        default 0 
+		        help
+		            I2S dma channel to use.  
+		    config SPDIF_BCK_IO         
+		        int "SDPIF Bit clock GPIO number"
+				default I2S_BCK_IO
+		        help
+		            Must be set as SPDIF re-uses I2S but only needs DO (recommendation: set it to I2S Bit clock value)
+		    config SPDIF_WS_IO         
+		        int "SPDIF Word Select GPIO number"
+				default I2S_WS_IO
+		        help
+		            Must be set as SPDIF re-uses I2S but only needs DO (recommendation: set it to I2S Word select value)
+		    config SPDIF_DO_IO         
+		        int "SPDIF Data I/O GPIO number"
+		        default -1
+				help
+		            I2S data output IO use to simulate SPDIF
+		endmenu
+			
+		menu "A2DP settings"
+		    config A2DP_SINK_NAME
+		        string "Name of Bluetooth A2DP device"
+		        default "SMSL BT4.2"
+		        help
+		            This is the name of the bluetooth speaker that Squeezelite will try connecting to.
+		    config A2DP_DEV_NAME
+		        string "Name of Squeezelite device to use when connecting to A2DP device"
+		        default "Squeezelite"
+		        help
+		            This is the name of the device that the Bluetooth speaker will see when it is connected to.
+		    config A2DP_CONTROL_DELAY_MS
+		        int "Control loop delay. "
+		        default 500
+		        help
+		            Decreasing this will lead to a more responsive BT control, but might lead to noisy log files if debug is enabled.
+		    config A2DP_CONNECT_TIMEOUT_MS
+		    	int "Time out duration when trying to connect to an A2DP audio sink"
+		        default 1000
+		        help
+		            Increasing this value will give more chance for less stable connections to be established.	   
+		endmenu
+	endmenu
+	
+	menu "Audio Input"
+		config BT_SINK
+			bool "Bluetooth receiver"
+			default y
+			help
+				Enable bluetooth sink (Note that you obviously can't at the same time be a Bluetooth receiver and transmitter)
+		config BT_NAME
+			depends on BT_SINK
+			string "Name of Bluetooth A2DP device"
+		        default "ESP32-BT"
+		    help
+				This is the name of the bluetooth speaker that will be broadcasted			
+		config BT_SINK_PIN		
+			depends on BT_SINK		
+			int "Bluetooth PIN code"
+		        default 1234
+		config AIRPLAY_SINK
+			bool "AirPlay receiver"
+			default y
+		config AIRPLAY_NAME
+			depends on AIRPLAY_SINK
+			string "Name of AirPlay device"
+				default "ESP32-AirPlay"
+		    help
+				This is the name of the AirPlay speaker that will be broadcasted		
+		config AIRPLAY_PORT
+			depends on AIRPLAY_SINK
+			string "AirPlay listening port"
+				default 5000
+		    help
+				AirPlay service listening port
+	endmenu	
+
+	menu "Display Screen"
+		depends on !TWATCH2020
+		config DISPLAY_CONFIG
+			string "Screen configuraton"
+			help
+				Set parameters for display screen, leave empty for no screen
+				I2C,driver=<model>,width=<pixels>,height=<pixels>[address=<i2c_address>][,HFlip][,VFlip][,rotate]
+				SPI,driver=<model>,width=<pixels>,height=<pixels>,cs=<gpio>[,HFlip][,VFlip][,rotate]
+	endmenu	
+	
+	menu "Various I/O"
+		visible if !TWATCH2020
+		config I2C_CONFIG
+			string "I2C system configuration"
+			default ""
+			help
+				Set parameters of shared I2C interface
+				sda=<gpio>,scl=<gpio>[,speed=<num>][,port=<0|1>]
+		config SPI_CONFIG
+			string "SPI system configuration"
+			help
+				Set parameters of shared SPI interface
+				data=<gpio>,clk=<gpio>[,d/c=<num>][,host=<0|1|2>]				
+		config SET_GPIO				
+			string "Special GPIO configuration"
+			default ""
+			help
+				Set parameters of shared GPIO with special values. 
+				<gpio_1>=Vcc|GND|amp[:0|1]|jack[:0|1][,<gpio_n>=Vcc|GND|amp[:0|1]|jack[:0|1]]
+				'amp'  => GPIO that is set when playback starts 
+				'jack' => GPIO used for audio jack detection
+				'green', 'red' => GPIO for status LED
+				'[:0|1] means set the active value for that GPIO can be low or high
+		config ROTARY_ENCODER
+			string "Rotary Encoder configuration"
+			default ""
+			help
+				Set GPIO for rotary encoder (quadrature phase). See README on SqueezeESP32 project's GitHub for more details
+				A=<gpio>,B=<gpio>[,SW=gpio>[[,knobonly[=<ms>]|[,volume][,longpress]]			
+		config GPIO_EXP_CONFIG
+			string "GPIO expander configuration"
+			help
+				Set parameters of GPIO extender
+				model=<model>[,addr=<addr>][,base=<100..N>][,count=<0..32>][,intr=<gpio>][,port=dac|system]				
+	endmenu
+	menu "LED configuration"
+		visible if !SQUEEZEAMP && !TWATCH2020
+		config LED_GREEN_GPIO
+			int "Green led GPIO"
+			default 12 if SQUEEZEAMP			
+			default -1 
+			help
+				Set to -1 for no LED
+		config LED_GREEN_GPIO_LEVEL
+			int "Green led ON level"
+			depends on LED_GREEN_GPIO != -1
+			default 0 if SQUEEZEAMP
+			default 1 
+		config LED_RED_GPIO				
+			int "Red led GPIO"
+			default 13 if SQUEEZEAMP
+			default -1
+			help
+				Set to -1 for no LED
+		config LED_RED_GPIO_LEVEL
+			int "Red led ON level"
+			depends on LED_RED_GPIO != -1
+			default 0 if SQUEEZEAMP
+			default 1
+	endmenu
+    menu "Audio JACK"	
+		visible if !SQUEEZEAMP && !TWATCH2020
+		config JACK_GPIO		
+			int "Jack insertion GPIO"
+			default 34 if SQUEEZEAMP
+			default -1
+			help
+				GPIO to detect speaker jack insertion. Set to -1 for no detection. 
+		config JACK_GPIO_LEVEL
+			depends on JACK_GPIO != -1
+			int "Level when inserted (0/1)"
+			default 0
+	endmenu	
+	menu "Speaker Fault"	
+		visible if !SQUEEZEAMP && !TWATCH2020
+		config SPKFAULT_GPIO		
+			int "Speaker fault GPIO"
+			default 2 if SQUEEZEAMP
+			default -1
+			help
+				GPIO to detect speaker fault condition. Set to -1 for no detection. 
+		config SPKFAULT_GPIO_LEVEL
+			depends on SPKFAULT_GPIO != -1
+			int "Level when fault (0/1)"
+			default 0
+	endmenu	
+	menu "Battery measure"	
+		visible if !SQUEEZEAMP && !TWATCH2020
+		config BAT_CHANNEL	
+			int "Set channel (0..7)"
+			default 7 if SQUEEZEAMP
+			default -1 
+			help
+				Read a value every 10s on ADC1 on set Channel
+		config BAT_SCALE	
+			string "Set scaling factor"
+			depends on BAT_CHANNEL != -1
+			default "20.24" if SQUEEZEAMP
+			default "" 
+			help
+				Set the scaling factor for this 12 bits ADC
+	endmenu	
+	
+endmenu

@@ -1,0 +1,348 @@
+{
+	"gpio": [
+		{
+			"gpio": 33,
+			"name": "bck",
+			"group": "spdif",
+			"fixed": false
+		},
+		{
+			"gpio": 25,
+			"name": "ws",
+			"group": "spdif",
+			"fixed": false
+		},
+		{
+			"gpio": 15,
+			"name": "do",
+			"group": "spdif",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "bck",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "ws",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "do",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "sda",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "scl",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": -1,
+			"name": "mute",
+			"group": "dac",
+			"fixed": false
+		},
+		{
+			"gpio": 17,
+			"name": "clk",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 16,
+			"name": "cs",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 7,
+			"name": "spiq_sd0_io",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 8,
+			"name": "spid_sd1_io",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 10,
+			"name": "spiwp_sd3_io",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 9,
+			"name": "spihd_sd2_io",
+			"group": "psram",
+			"fixed": true
+		},
+		{
+			"gpio": 6,
+			"name": "clk",
+			"group": "flash",
+			"fixed": true
+		},
+		{
+			"gpio": 11,
+			"name": "cs",
+			"group": "flash",
+			"fixed": true
+		}
+	],
+	"config": {
+		"a2dp_sink_name": {
+			"type": 33,
+			"value": "SMSL BT4.2",
+			"chg": false
+		},
+		"a2dp_ctmt": {
+			"type": 33,
+			"value": "1000",
+			"chg": false
+		},
+		"a2dp_ctrld": {
+			"type": 33,
+			"value": "500",
+			"chg": false
+		},
+		"bt_sink_pin": {
+			"type": 33,
+			"value": "1234",
+			"chg": false
+		},
+		"release_url": {
+			"type": 33,
+			"value": "https://github.com/sle118/squeezelite-esp32/releases",
+			"chg": false
+		},
+		"ap_ip_address": {
+			"type": 33,
+			"value": "192.168.4.1",
+			"chg": false
+		},
+		"ap_ip_gateway": {
+			"type": 33,
+			"value": "192.168.4.1",
+			"chg": false
+		},
+		"ap_ip_netmask": {
+			"type": 33,
+			"value": "255.255.255.0",
+			"chg": false
+		},
+		"ap_channel": {
+			"type": 33,
+			"value": "1",
+			"chg": false
+		},
+		"ap_pwd": {
+			"type": 33,
+			"value": "squeezelite",
+			"chg": false
+		},
+		"airplay_port": {
+			"type": 33,
+			"value": "5000",
+			"chg": false
+		},
+		"bypass_wm": {
+			"type": 33,
+			"value": "0",
+			"chg": false
+		},
+		"actrls_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"lms_ctrls_raw": {
+			"type": 33,
+			"value": "n",
+			"chg": false
+		},
+		"rotary_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"ota_erase_blk": {
+			"type": 33,
+			"value": "249856",
+			"chg": false
+		},
+		"ota_stack": {
+			"type": 33,
+			"value": "10240",
+			"chg": false
+		},
+		"ota_prio": {
+			"type": 33,
+			"value": "6",
+			"chg": false
+		},
+		"display_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"i2c_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"spi_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"set_GPIO": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"led_brightness": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"dac_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"dac_controlset": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"jack_mutes_amp": {
+			"type": 33,
+			"value": "n",
+			"chg": false
+		},
+		"bat_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"metadata_config": {
+			"type": 33,
+			"value": "",
+			"chg": false
+		},
+		"telnet_buffer": {
+			"type": 33,
+			"value": "40000",
+			"chg": false
+		},
+		"telnet_block": {
+			"type": 33,
+			"value": "500",
+			"chg": false
+		},
+		"spdif_config": {
+			"type": 33,
+			"value": "bck=33,ws=25,do=15",
+			"chg": false
+		},
+		"enable_bt_sink": {
+			"type": 33,
+			"value": "N",
+			"chg": false
+		},
+		"enable_airplay": {
+			"type": 33,
+			"value": "N",
+			"chg": false
+		},
+		"wifi_smode": {
+			"type": 33,
+			"value": "a",
+			"chg": false
+		},
+		"disable_ps": {
+			"type": 33,
+			"value": "n",
+			"chg": false
+		},
+		"stats": {
+			"type": 33,
+			"value": "Y",
+			"chg": false
+		},
+		"autoexec": {
+			"type": 33,
+			"value": "1",
+			"chg": false
+		},
+		"autoexec1_spdif": {
+			"type": 33,
+			"value": "squeezelite -b 500:2000 -d all=info -C 30 -W -n \"squeezelite-test3\" -o SPDIF -Z 192000",
+			"chg": false
+		},
+		"autoexec1_i2s": {
+			"type": 33,
+			"value": "squeezelite -b 500:2000 -d all=info -C 30 -W -n \"squeezelite-test3\" -o I2S",
+			"chg": false
+		},
+		"autoexec1_bt": {
+			"type": 33,
+			"value": "squeezelite -b 500:2000 -d all=info -C 30 -W -n \"squeezelite-test3\" -o \"BT -n 'test'\" -Z 192000",
+			"chg": false
+		},
+		"autoexec1": {
+			"type": 33,
+			"value": "squeezelite -b 500:2000 -d all=info -C 30 -W -n \"squeezelite-test3\" -o \"BT -n 'test'\" -Z 192000",
+			"chg": false
+		},
+		"bt_name": {
+			"type": 33,
+			"value": "squeezelite-test3",
+			"chg": false
+		},
+		"host_name": {
+			"type": 33,
+			"value": "squeezelite-test3",
+			"chg": false
+		},
+		"airplay_name": {
+			"type": 33,
+			"value": "squeezelite-test3",
+			"chg": false
+		},
+		"ap_ssid": {
+			"type": 33,
+			"value": "squeezelite-test3",
+			"chg": false
+		},
+		"a2dp_dev_name": {
+			"type": 33,
+			"value": "squeezelite-test3",
+			"chg": false
+		},
+		"telnet_enable": {
+			"type": 33,
+			"value": "D",
+			"chg": false
+		},
+		"rel_api": {
+			"type": 33,
+			"value": "https://api.github.com/repos/sle118/squeezelite-esp32/releases",
+			"chg": false
+		}
+  	}
+}
