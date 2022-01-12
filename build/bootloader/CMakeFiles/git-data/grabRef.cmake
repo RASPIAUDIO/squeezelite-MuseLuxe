@@ -15,18 +15,18 @@
 
 set(HEAD_HASH)
 
-file(READ "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
+file(READ "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
 if(HEAD_CONTENTS MATCHES "ref")
 	# named branch
 	string(REPLACE "ref: " "" HEAD_REF "${HEAD_CONTENTS}")
 	if(EXISTS "/home/ros/esp/esp-idf/.git/${HEAD_REF}")
-		configure_file("/home/ros/esp/esp-idf/.git/${HEAD_REF}" "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+		configure_file("/home/ros/esp/esp-idf/.git/${HEAD_REF}" "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
 	else()
 		if(EXISTS "/home/ros/esp/esp-idf/.git/packed-refs")
-			configure_file("/home/ros/esp/esp-idf/.git/packed-refs" "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/packed-refs" COPYONLY)
-			file(READ "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/packed-refs" PACKED_REFS)
+			configure_file("/home/ros/esp/esp-idf/.git/packed-refs" "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/packed-refs" COPYONLY)
+			file(READ "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/packed-refs" PACKED_REFS)
 			if(${PACKED_REFS} MATCHES "([0-9a-z]*) ${HEAD_REF}")
 				set(HEAD_HASH "${CMAKE_MATCH_1}")
 			endif()
@@ -34,10 +34,10 @@ if(HEAD_CONTENTS MATCHES "ref")
 	endif()
 else()
 	# detached HEAD
-	configure_file("/home/ros/esp/esp-idf/.git/HEAD" "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
+	configure_file("/home/ros/esp/esp-idf/.git/HEAD" "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/head-ref" COPYONLY)
 endif()
 
 if(NOT HEAD_HASH)
-	file(READ "/home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
+	file(READ "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
 	string(STRIP "${HEAD_HASH}" HEAD_HASH)
 endif()

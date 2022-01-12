@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -46,7 +46,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -103,6 +103,8 @@ build CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj: C_COMPILER__bootloade
   INCLUDES = -I/home/ros/esp/esp-idf/components/esp32/include -Iconfig -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader
   OBJECT_DIR = CMakeFiles/bootloader.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/bootloader.elf.dir
+  TARGET_COMPILE_PDB = CMakeFiles/bootloader.elf.dir/
+  TARGET_PDB = bootloader.elf.pdb
 
 
 # =============================================================================
@@ -115,12 +117,13 @@ build CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj: C_COMPILER__bootloade
 build bootloader.elf: C_EXECUTABLE_LINKER__bootloader.2eelf_ CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj | esp-idf/soc/libsoc.a esp-idf/xtensa/libxtensa.a esp-idf/log/liblog.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/spi_flash/libspi_flash.a esp-idf/efuse/libefuse.a esp-idf/bootloader_support/libbootloader_support.a esp-idf/main/libmain.a esp-idf/spi_flash/libspi_flash.a esp-idf/efuse/libefuse.a esp-idf/bootloader_support/libbootloader_support.a esp-idf/spi_flash/libspi_flash.a esp-idf/efuse/libefuse.a esp-idf/bootloader_support/libbootloader_support.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/xtensa/libxtensa.a esp-idf/log/liblog.a esp-idf/soc/libsoc.a esp-idf/xtensa/libxtensa.a esp-idf/log/liblog.a /home/ros/esp/esp-idf/components/xtensa/esp32/libhal.a /home/ros/esp/esp-idf/components/esp32/ld/esp32.peripherals.ld /home/ros/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld /home/ros/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld /home/ros/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld /home/ros/esp/esp-idf/components/bootloader/subproject/main/esp32.bootloader.ld /home/ros/esp/esp-idf/components/bootloader/subproject/main/esp32.bootloader.rom.ld || _project_elf_src esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a
   FLAGS = -mlongcalls -Wno-frame-address
   LINK_FLAGS = -nostdlib
-  LINK_LIBRARIES = esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  esp-idf/micro-ecc/libmicro-ecc.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/main/libmain.a  -Wl,--cref -Wl,--Map=/home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.map  -fno-rtti  -fno-lto  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/micro-ecc/libmicro-ecc.a  esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  -L /home/ros/esp/esp-idf/components/esp32/ld  -T esp32.peripherals.ld  /home/ros/esp/esp-idf/components/xtensa/esp32/libhal.a  -Wl,--gc-sections  -L /home/ros/esp/esp-idf/components/esp_rom/esp32/ld  -T esp32.rom.ld  -T esp32.rom.newlib-funcs.ld  -T esp32.rom.libgcc.ld  -L /home/ros/esp/esp-idf/components/bootloader/subproject/main  -T esp32.bootloader.ld  -T esp32.bootloader.rom.ld
+  LINK_LIBRARIES = esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  esp-idf/micro-ecc/libmicro-ecc.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/main/libmain.a  -Wl,--cref -Wl,--Map=/home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.map  -fno-rtti  -fno-lto  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/efuse/libefuse.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/micro-ecc/libmicro-ecc.a  esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  esp-idf/soc/libsoc.a  esp-idf/xtensa/libxtensa.a  esp-idf/log/liblog.a  -L /home/ros/esp/esp-idf/components/esp32/ld  -T esp32.peripherals.ld  /home/ros/esp/esp-idf/components/xtensa/esp32/libhal.a  -Wl,--gc-sections  -L /home/ros/esp/esp-idf/components/esp_rom/esp32/ld  -T esp32.rom.ld  -T esp32.rom.newlib-funcs.ld  -T esp32.rom.libgcc.ld  -L /home/ros/esp/esp-idf/components/bootloader/subproject/main  -T esp32.bootloader.ld  -T esp32.bootloader.rom.ld
   OBJECT_DIR = CMakeFiles/bootloader.elf.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/bootloader.elf.dir/
   TARGET_FILE = bootloader.elf
-  TARGET_PDB = bootloader.elf.dbg
+  TARGET_PDB = bootloader.elf.pdb
 
 
 #############################################
@@ -181,28 +184,28 @@ build encrypted-app-flash: phony CMakeFiles/encrypted-app-flash
 # Custom command for CMakeFiles/size-components
 
 build CMakeFiles/size-components: CUSTOM_COMMAND bootloader.elf || _project_elf_src bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py --archives /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.map
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py --archives /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.map
 
 
 #############################################
 # Custom command for CMakeFiles/size-files
 
 build CMakeFiles/size-files: CUSTOM_COMMAND bootloader.elf || _project_elf_src bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py --files /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.map
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py --files /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.map
 
 
 #############################################
 # Custom command for CMakeFiles/size
 
 build CMakeFiles/size: CUSTOM_COMMAND bootloader.elf || _project_elf_src bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.map
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/idf_size.py /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.map
 
 
 #############################################
 # Custom command for CMakeFiles/menuconfig
 
 build CMakeFiles/menuconfig: CUSTOM_COMMAND || mconf-idf
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-esp32ML/sdkconfig --env-file /home/ros/esp/squeezelite-esp32ML/build/bootloader/config.env --env IDF_TARGET=esp32 --dont-write-deprecated --output config /home/ros/esp/squeezelite-esp32ML/sdkconfig && /usr/bin/cmake -E env COMPONENT_KCONFIGS=/home/ros/esp/esp-idf/components/efuse/Kconfig\ /home/ros/esp/esp-idf/components/esp32/Kconfig\ /home/ros/esp/esp-idf/components/esp_common/Kconfig\ /home/ros/esp/esp-idf/components/log/Kconfig\ /home/ros/esp/esp-idf/components/spi_flash/Kconfig COMPONENT_KCONFIGS_PROJBUILD=/home/ros/esp/esp-idf/components/bootloader/Kconfig.projbuild\ /home/ros/esp/esp-idf/components/esptool_py/Kconfig.projbuild\ /home/ros/esp/esp-idf/components/partition_table/Kconfig.projbuild IDF_CMAKE=y KCONFIG_CONFIG=/home/ros/esp/squeezelite-esp32ML/sdkconfig IDF_TARGET=esp32 /home/ros/esp/squeezelite-esp32ML/build/bootloader/kconfig_bin/mconf-idf /home/ros/esp/esp-idf/Kconfig && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-esp32ML/sdkconfig --env-file /home/ros/esp/squeezelite-esp32ML/build/bootloader/config.env --env IDF_TARGET=esp32 --output config /home/ros/esp/squeezelite-esp32ML/sdkconfig
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-MuseLuxe/sdkconfig --env-file /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/config.env --env IDF_TARGET=esp32 --dont-write-deprecated --output config /home/ros/esp/squeezelite-MuseLuxe/sdkconfig && /usr/bin/cmake -E env COMPONENT_KCONFIGS=/home/ros/esp/esp-idf/components/efuse/Kconfig\ /home/ros/esp/esp-idf/components/esp32/Kconfig\ /home/ros/esp/esp-idf/components/esp_common/Kconfig\ /home/ros/esp/esp-idf/components/log/Kconfig\ /home/ros/esp/esp-idf/components/spi_flash/Kconfig COMPONENT_KCONFIGS_PROJBUILD=/home/ros/esp/esp-idf/components/bootloader/Kconfig.projbuild\ /home/ros/esp/esp-idf/components/esptool_py/Kconfig.projbuild\ /home/ros/esp/esp-idf/components/partition_table/Kconfig.projbuild IDF_CMAKE=y KCONFIG_CONFIG=/home/ros/esp/squeezelite-MuseLuxe/sdkconfig IDF_TARGET=esp32 /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/kconfig_bin/mconf-idf /home/ros/esp/esp-idf/Kconfig && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-MuseLuxe/sdkconfig --env-file /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/config.env --env IDF_TARGET=esp32 --output config /home/ros/esp/squeezelite-MuseLuxe/sdkconfig
   pool = console
 
 
@@ -210,7 +213,7 @@ build CMakeFiles/menuconfig: CUSTOM_COMMAND || mconf-idf
 # Custom command for CMakeFiles/flash
 
 build CMakeFiles/flash: CUSTOM_COMMAND partition_table bootloader || _project_elf_src app bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a gen_project_binary
-  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D ESPTOOLPY="/home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-esp32ML/build/bootloader" -P /home/ros/esp/esp-idf/components/esptool_py/run_esptool.cmake
+  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D ESPTOOLPY="/home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-MuseLuxe/build/bootloader" -P /home/ros/esp/esp-idf/components/esptool_py/run_esptool.cmake
   pool = console
 
 
@@ -218,7 +221,7 @@ build CMakeFiles/flash: CUSTOM_COMMAND partition_table bootloader || _project_el
 # Custom command for CMakeFiles/confserver
 
 build CMakeFiles/confserver: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confserver.py --env-file /home/ros/esp/squeezelite-esp32ML/build/bootloader/config.env --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-esp32ML/sdkconfig
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/tools/kconfig_new/confserver.py --env-file /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/config.env --kconfig /home/ros/esp/esp-idf/Kconfig --sdkconfig-rename /home/ros/esp/esp-idf/sdkconfig.rename --config /home/ros/esp/squeezelite-MuseLuxe/sdkconfig
   pool = console
 
 
@@ -226,7 +229,7 @@ build CMakeFiles/confserver: CUSTOM_COMMAND
 # Custom command for project_elf_src.c
 
 build project_elf_src.c: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/project_elf_src.c
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/project_elf_src.c
   DESC = Generating project_elf_src.c
   restat = 1
 
@@ -241,7 +244,7 @@ build CMakeFiles/gen_project_binary: phony .bin_timestamp || _project_elf_src bo
 # Custom command for .bin_timestamp
 
 build .bin_timestamp: CUSTOM_COMMAND bootloader.elf || _project_elf_src bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB -o /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.bin bootloader.elf && /usr/bin/cmake -E echo "Generated /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.bin" && /usr/bin/cmake -E md5sum /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.bin > /home/ros/esp/squeezelite-esp32ML/build/bootloader/.bin_timestamp
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB -o /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.bin bootloader.elf && /usr/bin/cmake -E echo "Generated /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.bin" && /usr/bin/cmake -E md5sum /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.bin > /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/.bin_timestamp
   DESC = Generating binary image from built executable
   restat = 1
 
@@ -256,7 +259,7 @@ build CMakeFiles/app: phony || _project_elf_src bootloader.elf esp-idf/bootloade
 # Custom command for CMakeFiles/app-flash
 
 build CMakeFiles/app-flash: CUSTOM_COMMAND || _project_elf_src app bootloader.elf esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/libefuse.a esp-idf/log/liblog.a esp-idf/main/libmain.a esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/libsoc.a esp-idf/spi_flash/libspi_flash.a esp-idf/xtensa/libxtensa.a gen_project_binary
-  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D ESPTOOLPY="/home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_app_args" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-esp32ML/build/bootloader" -P /home/ros/esp/esp-idf/components/esptool_py/run_esptool.cmake
+  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D ESPTOOLPY="/home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_app_args" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-MuseLuxe/build/bootloader" -P /home/ros/esp/esp-idf/components/esptool_py/run_esptool.cmake
   pool = console
 
 
@@ -278,7 +281,7 @@ build CMakeFiles/mconf-idf: phony CMakeFiles/mconf-idf-complete
 # Custom command for CMakeFiles/mconf-idf-complete
 
 build CMakeFiles/mconf-idf-complete mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-done: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/CMakeFiles/mconf-idf-complete && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-done
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/CMakeFiles/mconf-idf-complete && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-done
   DESC = Completed 'mconf-idf'
   restat = 1
 
@@ -287,7 +290,7 @@ build CMakeFiles/mconf-idf-complete mconf-idf-prefix/src/mconf-idf-stamp/mconf-i
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/kconfig_bin && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/kconfig_bin && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install
   DESC = No install step for 'mconf-idf'
   restat = 1
 
@@ -296,7 +299,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install: CUSTOM_COMMAND mco
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E make_directory /home/ros/esp/esp-idf/tools/kconfig && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/kconfig_bin && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/tmp && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E make_directory /home/ros/esp/esp-idf/tools/kconfig && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/kconfig_bin && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/tmp && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src && /usr/bin/cmake -E make_directory /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir
   DESC = Creating directories for 'mconf-idf'
   restat = 1
 
@@ -305,7 +308,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir: CUSTOM_COMMAND
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download
   DESC = No download step for 'mconf-idf'
   restat = 1
 
@@ -314,7 +317,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download: CUSTOM_COMMAND mc
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update
   DESC = No update step for 'mconf-idf'
   restat = 1
 
@@ -323,7 +326,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update: CUSTOM_COMMAND mcon
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch
   DESC = No patch step for 'mconf-idf'
   restat = 1
 
@@ -332,7 +335,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch: CUSTOM_COMMAND mconf
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure: CUSTOM_COMMAND mconf-idf-prefix/tmp/mconf-idf-cfgcmd.txt mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/kconfig_bin && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/kconfig_bin && /usr/bin/cmake -E echo_append && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure
   DESC = No configure step for 'mconf-idf'
   restat = 1
 
@@ -341,7 +344,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure: CUSTOM_COMMAND m
 # Custom command for mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build
 
 build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build kconfig_bin/mconf-idf: CUSTOM_COMMAND mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure /home/ros/esp/esp-idf/tools/kconfig/conf.c /home/ros/esp/esp-idf/tools/kconfig/confdata.c /home/ros/esp/esp-idf/tools/kconfig/expand_env.c /home/ros/esp/esp-idf/tools/kconfig/expr.c /home/ros/esp/esp-idf/tools/kconfig/gconf.c /home/ros/esp/esp-idf/tools/kconfig/images.c /home/ros/esp/esp-idf/tools/kconfig/kxgettext.c /home/ros/esp/esp-idf/tools/kconfig/mconf.c /home/ros/esp/esp-idf/tools/kconfig/menu.c /home/ros/esp/esp-idf/tools/kconfig/nconf.c /home/ros/esp/esp-idf/tools/kconfig/nconf.gui.c /home/ros/esp/esp-idf/tools/kconfig/symbol.c /home/ros/esp/esp-idf/tools/kconfig/util.c /home/ros/esp/esp-idf/tools/kconfig/Makefile /home/ros/esp/esp-idf/tools/cmake/idf.cmake
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/kconfig_bin && rm -f /home/ros/esp/esp-idf/tools/kconfig/zconf.lex.c /home/ros/esp/esp-idf/tools/kconfig/zconf.hash.c && make -f /home/ros/esp/esp-idf/tools/kconfig/Makefile mconf-idf && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-esp32ML/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/kconfig_bin && rm -f /home/ros/esp/esp-idf/tools/kconfig/zconf.lex.c /home/ros/esp/esp-idf/tools/kconfig/zconf.hash.c && make -f /home/ros/esp/esp-idf/tools/kconfig/Makefile mconf-idf && /usr/bin/cmake -E touch /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build
   DESC = Performing build step for 'mconf-idf'
   restat = 1
 
@@ -350,7 +353,7 @@ build mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build kconfig_bin/mconf-idf
 # Custom command for CMakeFiles/monitor
 
 build CMakeFiles/monitor: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D IDF_MONITOR="/home/ros/esp/esp-idf/tools/idf_monitor.py" -D ELF_FILE="bootloader.elf" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-esp32ML/build/bootloader" -P run_idf_monitor.cmake
+  COMMAND = cd /home/ros/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/ros/esp/esp-idf" -D IDF_MONITOR="/home/ros/esp/esp-idf/tools/idf_monitor.py" -D ELF_FILE="bootloader.elf" -D WORKING_DIRECTORY="/home/ros/esp/squeezelite-MuseLuxe/build/bootloader" -P run_idf_monitor.cmake
   pool = console
 
 
@@ -364,14 +367,14 @@ build CMakeFiles/_project_elf_src: phony project_elf_src.c
 # Custom command for CMakeFiles/encrypted-flash
 
 build CMakeFiles/encrypted-flash: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo "Error: The target encrypted-flash requires" && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled." && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/ros/esp/esp-idf/tools/cmake/scripts/fail.cmake
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo "Error: The target encrypted-flash requires" && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled." && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/ros/esp/esp-idf/tools/cmake/scripts/fail.cmake
 
 
 #############################################
 # Custom command for CMakeFiles/encrypted-app-flash
 
 build CMakeFiles/encrypted-app-flash: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader && /usr/bin/cmake -E echo "Error: The target encrypted-app-flash requires" && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled." && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/ros/esp/esp-idf/tools/cmake/scripts/fail.cmake
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader && /usr/bin/cmake -E echo "Error: The target encrypted-app-flash requires" && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled." && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/ros/esp/esp-idf/tools/cmake/scripts/fail.cmake
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -383,7 +386,7 @@ build CMakeFiles/encrypted-app-flash: CUSTOM_COMMAND
 # Utility command for rebuild_cache
 
 build esp-idf/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -395,7 +398,7 @@ build esp-idf/rebuild_cache: phony esp-idf/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build esp-idf/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -411,7 +414,7 @@ build esp-idf/edit_cache: phony esp-idf/CMakeFiles/edit_cache.util
 # Utility command for edit_cache
 
 build esp-idf/esp32/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp32 && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp32 && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -422,7 +425,7 @@ build esp-idf/esp32/edit_cache: phony esp-idf/esp32/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build esp-idf/esp32/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp32 && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp32 && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -439,7 +442,7 @@ build esp-idf/esp32/rebuild_cache: phony esp-idf/esp32/CMakeFiles/rebuild_cache.
 # Utility command for rebuild_cache
 
 build esp-idf/soc/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/soc && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/soc && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -451,7 +454,7 @@ build esp-idf/soc/rebuild_cache: phony esp-idf/soc/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build esp-idf/soc/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/soc && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/soc && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -472,6 +475,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/cpu_util.c.obj: C_COMPILER____i
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/gpio_periph.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj.d
@@ -479,6 +484,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj: C_COMPILER__
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_clk.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk.c.obj.d
@@ -486,6 +493,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk.c.obj: C_COMPILER____id
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk_init.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_clk_init.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk_init.c.obj.d
@@ -493,6 +502,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_clk_init.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_init.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_init.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_init.c.obj.d
@@ -500,6 +511,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_init.c.obj: C_COMPILER____i
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_periph.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_periph.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_periph.c.obj.d
@@ -507,6 +520,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_periph.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_pm.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_pm.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_pm.c.obj.d
@@ -514,6 +529,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_pm.c.obj: C_COMPILER____idf
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_sleep.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_sleep.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_sleep.c.obj.d
@@ -521,6 +538,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_sleep.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_time.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_time.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_time.c.obj.d
@@ -528,6 +547,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_time.c.obj: C_COMPILER____i
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_wdt.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/rtc_wdt.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_wdt.c.obj.d
@@ -535,6 +556,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_wdt.c.obj: C_COMPILER____id
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/sdio_slave_periph.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj.d
@@ -542,6 +565,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj: C_COMP
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/sdmmc_periph.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj.d
@@ -549,6 +574,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/soc_memory_layout.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/soc_memory_layout.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/soc_memory_layout.c.obj.d
@@ -556,6 +583,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/soc_memory_layout.c.obj: C_COMP
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/esp32/spi_periph.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj.d
@@ -563,6 +592,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj: C_COMPILER___
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/memory_layout_utils.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj.d
@@ -570,6 +601,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/memory_layout_utils.c.obj: C_COMP
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/lldesc.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj.d
@@ -577,6 +610,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/lldesc.c.obj: C_COMPILER____idf_s
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_hal.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj.d
@@ -584,6 +619,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal.c.obj: C_COMPILER____
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_hal_iram.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj.d
@@ -591,6 +628,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_hal_iram.c.obj: C_COMPILE
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_slave_hal.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj.d
@@ -598,6 +637,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_slave_hal_iram.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj.d
@@ -605,6 +646,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_slave_hal_iram.c.obj: C_C
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/soc_include_legacy_warn.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj.d
@@ -612,6 +655,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/soc_include_legacy_warn.c.obj: C_
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_flash_hal.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj.d
@@ -619,6 +664,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj: C_COMPILER____idf_soc_ /home/ros/esp/esp-idf/components/soc/src/hal/spi_flash_hal_iram.c || cmake_object_order_depends_target___idf_soc
   DEP_FILE = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj.d
@@ -626,6 +673,8 @@ build esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal/spi_flash_hal_iram.c.obj: C_C
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   OBJECT_FILE_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir/src/hal
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 
 # =============================================================================
@@ -640,8 +689,9 @@ build esp-idf/soc/libsoc.a: C_STATIC_LIBRARY_LINKER____idf_soc_ esp-idf/soc/CMak
   OBJECT_DIR = esp-idf/soc/CMakeFiles/__idf_soc.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/soc/CMakeFiles/__idf_soc.dir/__idf_soc.pdb
   TARGET_FILE = esp-idf/soc/libsoc.a
-  TARGET_PDB = soc.a.dbg
+  TARGET_PDB = esp-idf/soc/libsoc.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -653,7 +703,7 @@ build esp-idf/soc/libsoc.a: C_STATIC_LIBRARY_LINKER____idf_soc_ esp-idf/soc/CMak
 # Utility command for rebuild_cache
 
 build esp-idf/xtensa/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/xtensa && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/xtensa && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -665,7 +715,7 @@ build esp-idf/xtensa/rebuild_cache: phony esp-idf/xtensa/CMakeFiles/rebuild_cach
 # Utility command for edit_cache
 
 build esp-idf/xtensa/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/xtensa && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/xtensa && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -686,6 +736,8 @@ build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj: C_COMPILER
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
   OBJECT_FILE_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+  TARGET_COMPILE_PDB = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/__idf_xtensa.pdb
+  TARGET_PDB = esp-idf/xtensa/libxtensa.pdb
 
 build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj: ASM_COMPILER____idf_xtensa_ /home/ros/esp/esp-idf/components/xtensa/debug_helpers_asm.S || cmake_object_order_depends_target___idf_xtensa
   DEP_FILE = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj.d
@@ -693,6 +745,8 @@ build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj: ASM_CO
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
   OBJECT_FILE_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+  TARGET_COMPILE_PDB = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/__idf_xtensa.pdb
+  TARGET_PDB = esp-idf/xtensa/libxtensa.pdb
 
 build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj: C_COMPILER____idf_xtensa_ /home/ros/esp/esp-idf/components/xtensa/eri.c || cmake_object_order_depends_target___idf_xtensa
   DEP_FILE = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj.d
@@ -700,6 +754,8 @@ build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj: C_COMPILER____idf_xt
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
   OBJECT_FILE_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+  TARGET_COMPILE_PDB = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/__idf_xtensa.pdb
+  TARGET_PDB = esp-idf/xtensa/libxtensa.pdb
 
 build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj: C_COMPILER____idf_xtensa_ /home/ros/esp/esp-idf/components/xtensa/trax.c || cmake_object_order_depends_target___idf_xtensa
   DEP_FILE = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj.d
@@ -707,6 +763,8 @@ build esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj: C_COMPILER____idf_x
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
   OBJECT_FILE_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
+  TARGET_COMPILE_PDB = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/__idf_xtensa.pdb
+  TARGET_PDB = esp-idf/xtensa/libxtensa.pdb
 
 
 # =============================================================================
@@ -721,8 +779,9 @@ build esp-idf/xtensa/libxtensa.a: C_STATIC_LIBRARY_LINKER____idf_xtensa_ esp-idf
   OBJECT_DIR = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/__idf_xtensa.pdb
   TARGET_FILE = esp-idf/xtensa/libxtensa.a
-  TARGET_PDB = xtensa.a.dbg
+  TARGET_PDB = esp-idf/xtensa/libxtensa.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -734,7 +793,7 @@ build esp-idf/xtensa/libxtensa.a: C_STATIC_LIBRARY_LINKER____idf_xtensa_ esp-idf
 # Utility command for rebuild_cache
 
 build esp-idf/esp_common/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_common && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_common && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -746,7 +805,7 @@ build esp-idf/esp_common/rebuild_cache: phony esp-idf/esp_common/CMakeFiles/rebu
 # Utility command for edit_cache
 
 build esp-idf/esp_common/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_common && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_common && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -762,7 +821,7 @@ build esp-idf/esp_common/edit_cache: phony esp-idf/esp_common/CMakeFiles/edit_ca
 # Utility command for rebuild_cache
 
 build esp-idf/esp_rom/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_rom && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_rom && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -774,7 +833,7 @@ build esp-idf/esp_rom/rebuild_cache: phony esp-idf/esp_rom/CMakeFiles/rebuild_ca
 # Utility command for edit_cache
 
 build esp-idf/esp_rom/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_rom && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_rom && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -790,7 +849,7 @@ build esp-idf/esp_rom/edit_cache: phony esp-idf/esp_rom/CMakeFiles/edit_cache.ut
 # Utility command for rebuild_cache
 
 build esp-idf/log/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/log && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/log && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -802,7 +861,7 @@ build esp-idf/log/rebuild_cache: phony esp-idf/log/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build esp-idf/log/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/log && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/log && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -823,6 +882,8 @@ build esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj: C_COMPILER____idf_log_ /ho
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   OBJECT_FILE_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
+  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
+  TARGET_PDB = esp-idf/log/liblog.pdb
 
 
 # =============================================================================
@@ -837,8 +898,9 @@ build esp-idf/log/liblog.a: C_STATIC_LIBRARY_LINKER____idf_log_ esp-idf/log/CMak
   OBJECT_DIR = esp-idf/log/CMakeFiles/__idf_log.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/log/CMakeFiles/__idf_log.dir/__idf_log.pdb
   TARGET_FILE = esp-idf/log/liblog.a
-  TARGET_PDB = log.a.dbg
+  TARGET_PDB = esp-idf/log/liblog.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -850,7 +912,7 @@ build esp-idf/log/liblog.a: C_STATIC_LIBRARY_LINKER____idf_log_ esp-idf/log/CMak
 # Utility command for rebuild_cache
 
 build esp-idf/partition_table/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/partition_table && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/partition_table && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -862,7 +924,7 @@ build esp-idf/partition_table/rebuild_cache: phony esp-idf/partition_table/CMake
 # Utility command for edit_cache
 
 build esp-idf/partition_table/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/partition_table && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/partition_table && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -878,7 +940,7 @@ build esp-idf/partition_table/edit_cache: phony esp-idf/partition_table/CMakeFil
 # Utility command for rebuild_cache
 
 build esp-idf/bootloader/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -890,7 +952,7 @@ build esp-idf/bootloader/rebuild_cache: phony esp-idf/bootloader/CMakeFiles/rebu
 # Utility command for edit_cache
 
 build esp-idf/bootloader/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -906,7 +968,7 @@ build esp-idf/bootloader/edit_cache: phony esp-idf/bootloader/CMakeFiles/edit_ca
 # Utility command for rebuild_cache
 
 build esp-idf/micro-ecc/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/micro-ecc && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/micro-ecc && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -918,7 +980,7 @@ build esp-idf/micro-ecc/rebuild_cache: phony esp-idf/micro-ecc/CMakeFiles/rebuil
 # Utility command for edit_cache
 
 build esp-idf/micro-ecc/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/micro-ecc && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/micro-ecc && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -939,6 +1001,8 @@ build esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/micro-ecc/uECC.c.obj: C_C
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include
   OBJECT_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
   OBJECT_FILE_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/micro-ecc
+  TARGET_COMPILE_PDB = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/__idf_micro-ecc.pdb
+  TARGET_PDB = esp-idf/micro-ecc/libmicro-ecc.pdb
 
 
 # =============================================================================
@@ -953,8 +1017,9 @@ build esp-idf/micro-ecc/libmicro-ecc.a: C_STATIC_LIBRARY_LINKER____idf_micro-ecc
   OBJECT_DIR = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/__idf_micro-ecc.pdb
   TARGET_FILE = esp-idf/micro-ecc/libmicro-ecc.a
-  TARGET_PDB = micro-ecc.a.dbg
+  TARGET_PDB = esp-idf/micro-ecc/libmicro-ecc.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -966,7 +1031,7 @@ build esp-idf/micro-ecc/libmicro-ecc.a: C_STATIC_LIBRARY_LINKER____idf_micro-ecc
 # Utility command for rebuild_cache
 
 build esp-idf/spi_flash/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/spi_flash && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/spi_flash && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -978,7 +1043,7 @@ build esp-idf/spi_flash/rebuild_cache: phony esp-idf/spi_flash/CMakeFiles/rebuil
 # Utility command for edit_cache
 
 build esp-idf/spi_flash/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/spi_flash && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/spi_flash && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -999,6 +1064,8 @@ build esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_rom_patch.c.obj
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/spi_flash/private_include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
   OBJECT_FILE_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
+  TARGET_COMPILE_PDB = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/__idf_spi_flash.pdb
+  TARGET_PDB = esp-idf/spi_flash/libspi_flash.pdb
 
 
 # =============================================================================
@@ -1013,8 +1080,9 @@ build esp-idf/spi_flash/libspi_flash.a: C_STATIC_LIBRARY_LINKER____idf_spi_flash
   OBJECT_DIR = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/__idf_spi_flash.pdb
   TARGET_FILE = esp-idf/spi_flash/libspi_flash.a
-  TARGET_PDB = spi_flash.a.dbg
+  TARGET_PDB = esp-idf/spi_flash/libspi_flash.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1032,7 +1100,7 @@ build esp-idf/efuse/efuse_test_table: phony esp-idf/efuse/CMakeFiles/efuse_test_
 # Utility command for rebuild_cache
 
 build esp-idf/efuse/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1050,7 +1118,7 @@ build esp-idf/efuse/show_efuse_table: phony esp-idf/efuse/CMakeFiles/show_efuse_
 # Utility command for edit_cache
 
 build esp-idf/efuse/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1083,6 +1151,8 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj: C_CO
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32
+  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
+  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj: C_COMPILER____idf_efuse_ /home/ros/esp/esp-idf/components/efuse/src/esp_efuse_api.c || cmake_object_order_depends_target___idf_efuse
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj.d
@@ -1090,6 +1160,8 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj: C_COMPIL
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
+  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
+  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj: C_COMPILER____idf_efuse_ /home/ros/esp/esp-idf/components/efuse/src/esp_efuse_fields.c || cmake_object_order_depends_target___idf_efuse
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj.d
@@ -1097,6 +1169,8 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj: C_COM
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
+  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
+  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj: C_COMPILER____idf_efuse_ /home/ros/esp/esp-idf/components/efuse/src/esp_efuse_utility.c || cmake_object_order_depends_target___idf_efuse
   DEP_FILE = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj.d
@@ -1104,6 +1178,8 @@ build esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj: C_CO
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/spi_flash/include
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   OBJECT_FILE_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src
+  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
+  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 
 # =============================================================================
@@ -1118,29 +1194,30 @@ build esp-idf/efuse/libefuse.a: C_STATIC_LIBRARY_LINKER____idf_efuse_ esp-idf/ef
   OBJECT_DIR = esp-idf/efuse/CMakeFiles/__idf_efuse.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/efuse/CMakeFiles/__idf_efuse.dir/__idf_efuse.pdb
   TARGET_FILE = esp-idf/efuse/libefuse.a
-  TARGET_PDB = efuse.a.dbg
+  TARGET_PDB = esp-idf/efuse/libefuse.pdb
 
 
 #############################################
 # Custom command for esp-idf/efuse/CMakeFiles/efuse_test_table
 
 build esp-idf/efuse/CMakeFiles/efuse_test_table: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/test/esp_efuse_test_table.csv --max_blk_len 192
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/test/esp_efuse_test_table.csv --max_blk_len 192
 
 
 #############################################
 # Custom command for esp-idf/efuse/CMakeFiles/show_efuse_table
 
 build esp-idf/efuse/CMakeFiles/show_efuse_table: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192 --info
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192 --info
 
 
 #############################################
 # Custom command for esp-idf/efuse/CMakeFiles/efuse_common_table
 
 build esp-idf/efuse/CMakeFiles/efuse_common_table: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse && /home/ros/.espressif/python_env/idf4.0_py3.9_env/bin/python /home/ros/esp/esp-idf/components/efuse/efuse_table_gen.py /home/ros/esp/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1152,7 +1229,7 @@ build esp-idf/efuse/CMakeFiles/efuse_common_table: CUSTOM_COMMAND
 # Utility command for rebuild_cache
 
 build esp-idf/bootloader_support/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader_support && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader_support && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1164,7 +1241,7 @@ build esp-idf/bootloader_support/rebuild_cache: phony esp-idf/bootloader_support
 # Utility command for edit_cache
 
 build esp-idf/bootloader_support/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader_support && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader_support && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1185,6 +1262,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_common.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj.d
@@ -1192,6 +1271,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj.d
@@ -1199,6 +1280,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_flash_config.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.obj.d
@@ -1206,6 +1289,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_random.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj.d
@@ -1213,6 +1298,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj.d
@@ -1220,6 +1307,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/esp_image_format.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj.d
@@ -1227,6 +1316,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj.d
@@ -1234,6 +1325,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/flash_partitions.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj.d
@@ -1241,6 +1334,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/flash_qio_mode.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj.d
@@ -1248,6 +1343,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/fla
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/bootloader_init.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj.d
@@ -1255,6 +1352,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/boo
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_sha.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj.d
@@ -1262,6 +1361,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/esp32/flash_encrypt.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/flash_encrypt.c.obj.d
@@ -1269,6 +1370,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot_signatures.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/esp32/secure_boot_signatures.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot_signatures.c.obj.d
@@ -1276,6 +1379,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot.c.obj: C_COMPILER____idf_bootloader_support_ /home/ros/esp/esp-idf/components/bootloader_support/src/esp32/secure_boot.c || cmake_object_order_depends_target___idf_bootloader_support
   DEP_FILE = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/secure_boot.c.obj.d
@@ -1283,6 +1388,8 @@ build esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include -I/home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc -I/home/ros/esp/esp-idf/components/spi_flash/include -I/home/ros/esp/esp-idf/components/efuse/include -I/home/ros/esp/esp-idf/components/efuse/esp32/include
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   OBJECT_FILE_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 
 # =============================================================================
@@ -1297,8 +1404,9 @@ build esp-idf/bootloader_support/libbootloader_support.a: C_STATIC_LIBRARY_LINKE
   OBJECT_DIR = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/__idf_bootloader_support.pdb
   TARGET_FILE = esp-idf/bootloader_support/libbootloader_support.a
-  TARGET_PDB = bootloader_support.a.dbg
+  TARGET_PDB = esp-idf/bootloader_support/libbootloader_support.pdb
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1310,7 +1418,7 @@ build esp-idf/bootloader_support/libbootloader_support.a: C_STATIC_LIBRARY_LINKE
 # Utility command for edit_cache
 
 build esp-idf/esptool_py/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esptool_py && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esptool_py && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1321,7 +1429,7 @@ build esp-idf/esptool_py/edit_cache: phony esp-idf/esptool_py/CMakeFiles/edit_ca
 # Utility command for rebuild_cache
 
 build esp-idf/esptool_py/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esptool_py && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esptool_py && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1338,7 +1446,7 @@ build esp-idf/esptool_py/rebuild_cache: phony esp-idf/esptool_py/CMakeFiles/rebu
 # Utility command for rebuild_cache
 
 build esp-idf/main/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/main && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-esp32ML/build/bootloader
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/main && /usr/bin/cmake --regenerate-during-build -S/home/ros/esp/esp-idf/components/bootloader/subproject -B/home/ros/esp/squeezelite-MuseLuxe/build/bootloader
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1350,7 +1458,7 @@ build esp-idf/main/rebuild_cache: phony esp-idf/main/CMakeFiles/rebuild_cache.ut
 # Utility command for edit_cache
 
 build esp-idf/main/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/main && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/main && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1371,6 +1479,8 @@ build esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: C_COMPILER_
   INCLUDES = -Iconfig -I/home/ros/esp/esp-idf/components/log/include -I/home/ros/esp/esp-idf/components/esp_rom/include -I/home/ros/esp/esp-idf/components/esp_common/include -I/home/ros/esp/esp-idf/components/xtensa/include -I/home/ros/esp/esp-idf/components/xtensa/esp32/include -I/home/ros/esp/esp-idf/components/esp32/include -I/home/ros/esp/esp-idf/components/bootloader_support/include -I/home/ros/esp/esp-idf/components/bootloader_support/include_bootloader -I/home/ros/esp/esp-idf/components/soc/esp32 -I/home/ros/esp/esp-idf/components/soc/esp32/include -I/home/ros/esp/esp-idf/components/soc/include
   OBJECT_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
   OBJECT_FILE_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
+  TARGET_COMPILE_PDB = esp-idf/main/CMakeFiles/__idf_main.dir/__idf_main.pdb
+  TARGET_PDB = esp-idf/main/libmain.pdb
 
 
 # =============================================================================
@@ -1385,8 +1495,9 @@ build esp-idf/main/libmain.a: C_STATIC_LIBRARY_LINKER____idf_main_ esp-idf/main/
   OBJECT_DIR = esp-idf/main/CMakeFiles/__idf_main.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = esp-idf/main/CMakeFiles/__idf_main.dir/__idf_main.pdb
   TARGET_FILE = esp-idf/main/libmain.a
-  TARGET_PDB = main.a.dbg
+  TARGET_PDB = esp-idf/main/libmain.pdb
 
 # =============================================================================
 # Target aliases.
@@ -1437,112 +1548,112 @@ build show_efuse_table: phony esp-idf/efuse/show_efuse_table
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader
 
 build all: phony bootloader.elf app esp-idf/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf
 
 build esp-idf/all: phony esp-idf/esp32/all esp-idf/soc/all esp-idf/xtensa/all esp-idf/esp_common/all esp-idf/esp_rom/all esp-idf/log/all esp-idf/partition_table/all esp-idf/bootloader/all esp-idf/micro-ecc/all esp-idf/spi_flash/all esp-idf/efuse/all esp-idf/bootloader_support/all esp-idf/esptool_py/all esp-idf/main/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader
 
 build esp-idf/bootloader/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/bootloader_support
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/bootloader_support
 
 build esp-idf/bootloader_support/all: phony esp-idf/bootloader_support/libbootloader_support.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/efuse
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/efuse
 
 build esp-idf/efuse/all: phony esp-idf/efuse/libefuse.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp32
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp32
 
 build esp-idf/esp32/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_common
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_common
 
 build esp-idf/esp_common/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esp_rom
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esp_rom
 
 build esp-idf/esp_rom/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/esptool_py
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/esptool_py
 
 build esp-idf/esptool_py/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/log
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/log
 
 build esp-idf/log/all: phony esp-idf/log/liblog.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/main
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/main
 
 build esp-idf/main/all: phony esp-idf/main/libmain.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/micro-ecc
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/micro-ecc
 
 build esp-idf/micro-ecc/all: phony esp-idf/micro-ecc/libmicro-ecc.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/partition_table
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/partition_table
 
 build esp-idf/partition_table/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/soc
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/soc
 
 build esp-idf/soc/all: phony esp-idf/soc/libsoc.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/spi_flash
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/spi_flash
 
 build esp-idf/spi_flash/all: phony esp-idf/spi_flash/libspi_flash.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/ros/esp/squeezelite-esp32ML/build/bootloader/esp-idf/xtensa
+# Folder: /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/esp-idf/xtensa
 
 build esp-idf/xtensa/all: phony esp-idf/xtensa/libxtensa.a
 
@@ -1553,14 +1664,14 @@ build esp-idf/xtensa/all: phony esp-idf/xtensa/libxtensa.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/ros/esp/esp-idf/.git/HEAD /home/ros/esp/esp-idf/.git/modules/components/asio/asio/HEAD /home/ros/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /home/ros/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /home/ros/esp/esp-idf/.git/modules/components/esp_wifi/lib_esp32/HEAD /home/ros/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /home/ros/esp/esp-idf/.git/modules/components/expat/expat/HEAD /home/ros/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /home/ros/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /home/ros/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /home/ros/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /home/ros/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /home/ros/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /home/ros/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /home/ros/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /home/ros/esp/esp-idf/.git/modules/components/unity/unity/HEAD /home/ros/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /home/ros/esp/esp-idf/.git/refs/heads/release/v4.0 /home/ros/esp/esp-idf/CMakeLists.txt /home/ros/esp/esp-idf/components/asio/asio/.git /home/ros/esp/esp-idf/components/bootloader/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/project_include.cmake /home/ros/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /home/ros/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader_support/CMakeLists.txt /home/ros/esp/esp-idf/components/bt/controller/lib/.git /home/ros/esp/esp-idf/components/bt/host/nimble/nimble/.git /home/ros/esp/esp-idf/components/coap/libcoap/.git /home/ros/esp/esp-idf/components/efuse/CMakeLists.txt /home/ros/esp/esp-idf/components/efuse/esp32/sources.cmake /home/ros/esp/esp-idf/components/esp32/CMakeLists.txt /home/ros/esp/esp-idf/components/esp32/project_include.cmake /home/ros/esp/esp-idf/components/esp_common/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_rom/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_wifi/lib_esp32/.git /home/ros/esp/esp-idf/components/esptool_py/CMakeLists.txt /home/ros/esp/esp-idf/components/esptool_py/esptool/.git /home/ros/esp/esp-idf/components/esptool_py/project_include.cmake /home/ros/esp/esp-idf/components/expat/expat/.git /home/ros/esp/esp-idf/components/json/cJSON/.git /home/ros/esp/esp-idf/components/libsodium/libsodium/.git /home/ros/esp/esp-idf/components/log/CMakeLists.txt /home/ros/esp/esp-idf/components/lwip/lwip/.git /home/ros/esp/esp-idf/components/mbedtls/mbedtls/.git /home/ros/esp/esp-idf/components/mqtt/esp-mqtt/.git /home/ros/esp/esp-idf/components/nghttp/nghttp2/.git /home/ros/esp/esp-idf/components/partition_table/CMakeLists.txt /home/ros/esp/esp-idf/components/partition_table/project_include.cmake /home/ros/esp/esp-idf/components/protobuf-c/protobuf-c/.git /home/ros/esp/esp-idf/components/soc/CMakeLists.txt /home/ros/esp/esp-idf/components/soc/esp32/sources.cmake /home/ros/esp/esp-idf/components/spi_flash/CMakeLists.txt /home/ros/esp/esp-idf/components/spiffs/spiffs/.git /home/ros/esp/esp-idf/components/unity/unity/.git /home/ros/esp/esp-idf/components/xtensa/CMakeLists.txt /home/ros/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /home/ros/esp/esp-idf/tools/cmake/build.cmake /home/ros/esp/esp-idf/tools/cmake/component.cmake /home/ros/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /home/ros/esp/esp-idf/tools/cmake/git_submodules.cmake /home/ros/esp/esp-idf/tools/cmake/idf.cmake /home/ros/esp/esp-idf/tools/cmake/kconfig.cmake /home/ros/esp/esp-idf/tools/cmake/ldgen.cmake /home/ros/esp/esp-idf/tools/cmake/project.cmake /home/ros/esp/esp-idf/tools/cmake/project_description.json.in /home/ros/esp/esp-idf/tools/cmake/targets.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /home/ros/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /home/ros/esp/esp-idf/tools/cmake/utilities.cmake /home/ros/esp/esp-idf/tools/cmake/version.cmake /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py /home/ros/esp/esp-idf/tools/kconfig_new/config.env.in /home/ros/esp/esp-idf/tools/kconfig_new/kconfiglib.py /home/ros/esp/squeezelite-esp32ML/sdkconfig /usr/share/cmake-3.18/Modules/CMakeASMInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-ASM.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU.cmake /usr/share/cmake-3.18/Modules/ExternalProject.cmake /usr/share/cmake-3.18/Modules/FindGit.cmake /usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.18/Modules/FindPackageMessage.cmake /usr/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.18/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.18.4/CMakeASMCompiler.cmake CMakeFiles/3.18.4/CMakeCCompiler.cmake CMakeFiles/3.18.4/CMakeCXXCompiler.cmake CMakeFiles/3.18.4/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h mconf-idf-prefix/tmp/mconf-idf-cfgcmd.txt.in
+build build.ninja: RERUN_CMAKE | /home/ros/esp/esp-idf/.git/HEAD /home/ros/esp/esp-idf/.git/modules/components/asio/asio/HEAD /home/ros/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /home/ros/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /home/ros/esp/esp-idf/.git/modules/components/esp_wifi/lib_esp32/HEAD /home/ros/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /home/ros/esp/esp-idf/.git/modules/components/expat/expat/HEAD /home/ros/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /home/ros/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /home/ros/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /home/ros/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /home/ros/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /home/ros/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /home/ros/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /home/ros/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /home/ros/esp/esp-idf/.git/modules/components/unity/unity/HEAD /home/ros/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /home/ros/esp/esp-idf/.git/refs/heads/release/v4.0 /home/ros/esp/esp-idf/CMakeLists.txt /home/ros/esp/esp-idf/components/asio/asio/.git /home/ros/esp/esp-idf/components/bootloader/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/project_include.cmake /home/ros/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /home/ros/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader_support/CMakeLists.txt /home/ros/esp/esp-idf/components/bt/controller/lib/.git /home/ros/esp/esp-idf/components/bt/host/nimble/nimble/.git /home/ros/esp/esp-idf/components/coap/libcoap/.git /home/ros/esp/esp-idf/components/efuse/CMakeLists.txt /home/ros/esp/esp-idf/components/efuse/esp32/sources.cmake /home/ros/esp/esp-idf/components/esp32/CMakeLists.txt /home/ros/esp/esp-idf/components/esp32/project_include.cmake /home/ros/esp/esp-idf/components/esp_common/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_rom/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_wifi/lib_esp32/.git /home/ros/esp/esp-idf/components/esptool_py/CMakeLists.txt /home/ros/esp/esp-idf/components/esptool_py/esptool/.git /home/ros/esp/esp-idf/components/esptool_py/project_include.cmake /home/ros/esp/esp-idf/components/expat/expat/.git /home/ros/esp/esp-idf/components/json/cJSON/.git /home/ros/esp/esp-idf/components/libsodium/libsodium/.git /home/ros/esp/esp-idf/components/log/CMakeLists.txt /home/ros/esp/esp-idf/components/lwip/lwip/.git /home/ros/esp/esp-idf/components/mbedtls/mbedtls/.git /home/ros/esp/esp-idf/components/mqtt/esp-mqtt/.git /home/ros/esp/esp-idf/components/nghttp/nghttp2/.git /home/ros/esp/esp-idf/components/partition_table/CMakeLists.txt /home/ros/esp/esp-idf/components/partition_table/project_include.cmake /home/ros/esp/esp-idf/components/protobuf-c/protobuf-c/.git /home/ros/esp/esp-idf/components/soc/CMakeLists.txt /home/ros/esp/esp-idf/components/soc/esp32/sources.cmake /home/ros/esp/esp-idf/components/spi_flash/CMakeLists.txt /home/ros/esp/esp-idf/components/spiffs/spiffs/.git /home/ros/esp/esp-idf/components/unity/unity/.git /home/ros/esp/esp-idf/components/xtensa/CMakeLists.txt /home/ros/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /home/ros/esp/esp-idf/tools/cmake/build.cmake /home/ros/esp/esp-idf/tools/cmake/component.cmake /home/ros/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /home/ros/esp/esp-idf/tools/cmake/git_submodules.cmake /home/ros/esp/esp-idf/tools/cmake/idf.cmake /home/ros/esp/esp-idf/tools/cmake/kconfig.cmake /home/ros/esp/esp-idf/tools/cmake/ldgen.cmake /home/ros/esp/esp-idf/tools/cmake/project.cmake /home/ros/esp/esp-idf/tools/cmake/project_description.json.in /home/ros/esp/esp-idf/tools/cmake/targets.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /home/ros/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /home/ros/esp/esp-idf/tools/cmake/utilities.cmake /home/ros/esp/esp-idf/tools/cmake/version.cmake /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py /home/ros/esp/esp-idf/tools/kconfig_new/config.env.in /home/ros/esp/esp-idf/tools/kconfig_new/kconfiglib.py /home/ros/esp/squeezelite-MuseLuxe/sdkconfig /usr/share/cmake-3.18/Modules/CMakeASMCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeASMInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.18/Modules/CMakeCInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.18/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineASMCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.18/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.18/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.18/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.18/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.18/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.18/Modules/CMakeTestASMCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.18/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.18/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-ASM.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU.cmake /usr/share/cmake-3.18/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/ExternalProject.cmake /usr/share/cmake-3.18/Modules/FindGit.cmake /usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.18/Modules/FindPackageMessage.cmake /usr/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.18/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.18/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.18.4/CMakeASMCompiler.cmake CMakeFiles/3.18.4/CMakeCCompiler.cmake CMakeFiles/3.18.4/CMakeCXXCompiler.cmake CMakeFiles/3.18.4/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h mconf-idf-prefix/tmp/mconf-idf-cfgcmd.txt.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/ros/esp/esp-idf/.git/HEAD /home/ros/esp/esp-idf/.git/modules/components/asio/asio/HEAD /home/ros/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /home/ros/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /home/ros/esp/esp-idf/.git/modules/components/esp_wifi/lib_esp32/HEAD /home/ros/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /home/ros/esp/esp-idf/.git/modules/components/expat/expat/HEAD /home/ros/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /home/ros/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /home/ros/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /home/ros/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /home/ros/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /home/ros/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /home/ros/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /home/ros/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /home/ros/esp/esp-idf/.git/modules/components/unity/unity/HEAD /home/ros/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /home/ros/esp/esp-idf/.git/refs/heads/release/v4.0 /home/ros/esp/esp-idf/CMakeLists.txt /home/ros/esp/esp-idf/components/asio/asio/.git /home/ros/esp/esp-idf/components/bootloader/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/project_include.cmake /home/ros/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /home/ros/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader_support/CMakeLists.txt /home/ros/esp/esp-idf/components/bt/controller/lib/.git /home/ros/esp/esp-idf/components/bt/host/nimble/nimble/.git /home/ros/esp/esp-idf/components/coap/libcoap/.git /home/ros/esp/esp-idf/components/efuse/CMakeLists.txt /home/ros/esp/esp-idf/components/efuse/esp32/sources.cmake /home/ros/esp/esp-idf/components/esp32/CMakeLists.txt /home/ros/esp/esp-idf/components/esp32/project_include.cmake /home/ros/esp/esp-idf/components/esp_common/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_rom/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_wifi/lib_esp32/.git /home/ros/esp/esp-idf/components/esptool_py/CMakeLists.txt /home/ros/esp/esp-idf/components/esptool_py/esptool/.git /home/ros/esp/esp-idf/components/esptool_py/project_include.cmake /home/ros/esp/esp-idf/components/expat/expat/.git /home/ros/esp/esp-idf/components/json/cJSON/.git /home/ros/esp/esp-idf/components/libsodium/libsodium/.git /home/ros/esp/esp-idf/components/log/CMakeLists.txt /home/ros/esp/esp-idf/components/lwip/lwip/.git /home/ros/esp/esp-idf/components/mbedtls/mbedtls/.git /home/ros/esp/esp-idf/components/mqtt/esp-mqtt/.git /home/ros/esp/esp-idf/components/nghttp/nghttp2/.git /home/ros/esp/esp-idf/components/partition_table/CMakeLists.txt /home/ros/esp/esp-idf/components/partition_table/project_include.cmake /home/ros/esp/esp-idf/components/protobuf-c/protobuf-c/.git /home/ros/esp/esp-idf/components/soc/CMakeLists.txt /home/ros/esp/esp-idf/components/soc/esp32/sources.cmake /home/ros/esp/esp-idf/components/spi_flash/CMakeLists.txt /home/ros/esp/esp-idf/components/spiffs/spiffs/.git /home/ros/esp/esp-idf/components/unity/unity/.git /home/ros/esp/esp-idf/components/xtensa/CMakeLists.txt /home/ros/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /home/ros/esp/esp-idf/tools/cmake/build.cmake /home/ros/esp/esp-idf/tools/cmake/component.cmake /home/ros/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /home/ros/esp/esp-idf/tools/cmake/git_submodules.cmake /home/ros/esp/esp-idf/tools/cmake/idf.cmake /home/ros/esp/esp-idf/tools/cmake/kconfig.cmake /home/ros/esp/esp-idf/tools/cmake/ldgen.cmake /home/ros/esp/esp-idf/tools/cmake/project.cmake /home/ros/esp/esp-idf/tools/cmake/project_description.json.in /home/ros/esp/esp-idf/tools/cmake/targets.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /home/ros/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /home/ros/esp/esp-idf/tools/cmake/utilities.cmake /home/ros/esp/esp-idf/tools/cmake/version.cmake /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py /home/ros/esp/esp-idf/tools/kconfig_new/config.env.in /home/ros/esp/esp-idf/tools/kconfig_new/kconfiglib.py /home/ros/esp/squeezelite-esp32ML/sdkconfig /usr/share/cmake-3.18/Modules/CMakeASMInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-ASM.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU.cmake /usr/share/cmake-3.18/Modules/ExternalProject.cmake /usr/share/cmake-3.18/Modules/FindGit.cmake /usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.18/Modules/FindPackageMessage.cmake /usr/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.18/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.18.4/CMakeASMCompiler.cmake CMakeFiles/3.18.4/CMakeCCompiler.cmake CMakeFiles/3.18.4/CMakeCXXCompiler.cmake CMakeFiles/3.18.4/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h mconf-idf-prefix/tmp/mconf-idf-cfgcmd.txt.in: phony
+build /home/ros/esp/esp-idf/.git/HEAD /home/ros/esp/esp-idf/.git/modules/components/asio/asio/HEAD /home/ros/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/controller/lib/HEAD /home/ros/esp/esp-idf/.git/modules/components/bt/host/nimble/nimble/HEAD /home/ros/esp/esp-idf/.git/modules/components/coap/libcoap/HEAD /home/ros/esp/esp-idf/.git/modules/components/esp_wifi/lib_esp32/HEAD /home/ros/esp/esp-idf/.git/modules/components/esptool_py/esptool/HEAD /home/ros/esp/esp-idf/.git/modules/components/expat/expat/HEAD /home/ros/esp/esp-idf/.git/modules/components/json/cJSON/HEAD /home/ros/esp/esp-idf/.git/modules/components/libsodium/libsodium/HEAD /home/ros/esp/esp-idf/.git/modules/components/lwip/lwip/HEAD /home/ros/esp/esp-idf/.git/modules/components/mbedtls/mbedtls/HEAD /home/ros/esp/esp-idf/.git/modules/components/mqtt/esp-mqtt/HEAD /home/ros/esp/esp-idf/.git/modules/components/nghttp/nghttp2/HEAD /home/ros/esp/esp-idf/.git/modules/components/protobuf-c/protobuf-c/HEAD /home/ros/esp/esp-idf/.git/modules/components/spiffs/spiffs/HEAD /home/ros/esp/esp-idf/.git/modules/components/unity/unity/HEAD /home/ros/esp/esp-idf/.git/modules/examples/build_system/cmake/import_lib/main/lib/tinyxml2/HEAD /home/ros/esp/esp-idf/.git/refs/heads/release/v4.0 /home/ros/esp/esp-idf/CMakeLists.txt /home/ros/esp/esp-idf/components/asio/asio/.git /home/ros/esp/esp-idf/components/bootloader/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/project_include.cmake /home/ros/esp/esp-idf/components/bootloader/subproject/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/.git /home/ros/esp/esp-idf/components/bootloader/subproject/main/CMakeLists.txt /home/ros/esp/esp-idf/components/bootloader_support/CMakeLists.txt /home/ros/esp/esp-idf/components/bt/controller/lib/.git /home/ros/esp/esp-idf/components/bt/host/nimble/nimble/.git /home/ros/esp/esp-idf/components/coap/libcoap/.git /home/ros/esp/esp-idf/components/efuse/CMakeLists.txt /home/ros/esp/esp-idf/components/efuse/esp32/sources.cmake /home/ros/esp/esp-idf/components/esp32/CMakeLists.txt /home/ros/esp/esp-idf/components/esp32/project_include.cmake /home/ros/esp/esp-idf/components/esp_common/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_rom/CMakeLists.txt /home/ros/esp/esp-idf/components/esp_wifi/lib_esp32/.git /home/ros/esp/esp-idf/components/esptool_py/CMakeLists.txt /home/ros/esp/esp-idf/components/esptool_py/esptool/.git /home/ros/esp/esp-idf/components/esptool_py/project_include.cmake /home/ros/esp/esp-idf/components/expat/expat/.git /home/ros/esp/esp-idf/components/json/cJSON/.git /home/ros/esp/esp-idf/components/libsodium/libsodium/.git /home/ros/esp/esp-idf/components/log/CMakeLists.txt /home/ros/esp/esp-idf/components/lwip/lwip/.git /home/ros/esp/esp-idf/components/mbedtls/mbedtls/.git /home/ros/esp/esp-idf/components/mqtt/esp-mqtt/.git /home/ros/esp/esp-idf/components/nghttp/nghttp2/.git /home/ros/esp/esp-idf/components/partition_table/CMakeLists.txt /home/ros/esp/esp-idf/components/partition_table/project_include.cmake /home/ros/esp/esp-idf/components/protobuf-c/protobuf-c/.git /home/ros/esp/esp-idf/components/soc/CMakeLists.txt /home/ros/esp/esp-idf/components/soc/esp32/sources.cmake /home/ros/esp/esp-idf/components/spi_flash/CMakeLists.txt /home/ros/esp/esp-idf/components/spiffs/spiffs/.git /home/ros/esp/esp-idf/components/unity/unity/.git /home/ros/esp/esp-idf/components/xtensa/CMakeLists.txt /home/ros/esp/esp-idf/examples/build_system/cmake/import_lib/main/lib/tinyxml2/.git /home/ros/esp/esp-idf/tools/cmake/build.cmake /home/ros/esp/esp-idf/tools/cmake/component.cmake /home/ros/esp/esp-idf/tools/cmake/crosstool_version_check.cmake /home/ros/esp/esp-idf/tools/cmake/git_submodules.cmake /home/ros/esp/esp-idf/tools/cmake/idf.cmake /home/ros/esp/esp-idf/tools/cmake/kconfig.cmake /home/ros/esp/esp-idf/tools/cmake/ldgen.cmake /home/ros/esp/esp-idf/tools/cmake/project.cmake /home/ros/esp/esp-idf/tools/cmake/project_description.json.in /home/ros/esp/esp-idf/tools/cmake/targets.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake /home/ros/esp/esp-idf/tools/cmake/third_party/GetGitRevisionDescription.cmake.in /home/ros/esp/esp-idf/tools/cmake/toolchain-esp32.cmake /home/ros/esp/esp-idf/tools/cmake/utilities.cmake /home/ros/esp/esp-idf/tools/cmake/version.cmake /home/ros/esp/esp-idf/tools/kconfig_new/confgen.py /home/ros/esp/esp-idf/tools/kconfig_new/config.env.in /home/ros/esp/esp-idf/tools/kconfig_new/kconfiglib.py /home/ros/esp/squeezelite-MuseLuxe/sdkconfig /usr/share/cmake-3.18/Modules/CMakeASMCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeASMInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.18/Modules/CMakeCInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.18/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineASMCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.18/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.18/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.18/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.18/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.18/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.18/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.18/Modules/CMakeTestASMCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.18/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.18/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.18/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-ASM.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.18/Modules/Compiler/GNU.cmake /usr/share/cmake-3.18/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.18/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.18/Modules/ExternalProject.cmake /usr/share/cmake-3.18/Modules/FindGit.cmake /usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.18/Modules/FindPackageMessage.cmake /usr/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.18/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.18/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.18.4/CMakeASMCompiler.cmake CMakeFiles/3.18.4/CMakeCCompiler.cmake CMakeFiles/3.18.4/CMakeCXXCompiler.cmake CMakeFiles/3.18.4/CMakeSystem.cmake CMakeFiles/git-data/grabRef.cmake config/sdkconfig.cmake config/sdkconfig.h mconf-idf-prefix/tmp/mconf-idf-cfgcmd.txt.in: phony
 
 
 #############################################

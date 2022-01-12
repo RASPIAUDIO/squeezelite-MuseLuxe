@@ -1,4 +1,4 @@
-/* * Data converted from /home/ros/esp/squeezelite-esp32ML/server_certs/github.pem
+/* * Data converted from /home/ros/esp/squeezelite-MuseLuxe/server_certs/github.pem
  */
 .data
 .section .rodata.embedded

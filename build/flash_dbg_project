@@ -2,8 +2,8 @@ target remote :3333
 mon reset halt
 flushregs
 set remote hardware-watchpoint-limit 2
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/partition_table/partition-table.bin 0x8000
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/ota_data_initial.bin 0xd000
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/bootloader/bootloader.bin 0x1000
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/recovery.bin 0x10000
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/squeezelite.bin 0x150000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/partition_table/partition-table.bin 0x8000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/ota_data_initial.bin 0xd000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/bootloader/bootloader.bin 0x1000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/recovery.bin 0x10000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/squeezelite.bin 0x150000

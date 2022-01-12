@@ -3,4 +3,4 @@ mon reset halt
 flushregs
 set remote hardware-watchpoint-limit 2
 mon esp32 appimage_offset  0x150000
-mon program_esp32 /home/ros/esp/squeezelite-esp32ML/build/squeezelite.bin 0x150000
+mon program_esp32 /home/ros/esp/squeezelite-MuseLuxe/build/squeezelite.bin 0x150000

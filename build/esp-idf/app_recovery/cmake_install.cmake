@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/esp/squeezelite-esp32ML/components/platform_console/app_recovery
+# Install script for directory: /home/ros/esp/squeezelite-MuseLuxe/components/platform_console/app_recovery
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

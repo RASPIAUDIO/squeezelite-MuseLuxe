@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/esp/squeezelite-esp32ML/components/esp_http_server
+# Install script for directory: /home/ros/esp/squeezelite-MuseLuxe/components/esp_http_server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

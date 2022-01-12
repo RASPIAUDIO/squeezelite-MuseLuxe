@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/esp/squeezelite-esp32ML/components/squeezelite-ota
+# Install script for directory: /home/ros/esp/squeezelite-MuseLuxe/components/squeezelite-ota
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

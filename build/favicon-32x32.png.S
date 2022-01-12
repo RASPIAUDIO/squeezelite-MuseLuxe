@@ -1,4 +1,4 @@
-/* * Data converted from /home/ros/esp/squeezelite-esp32ML/components/wifi-manager/webapp/webpack/dist/favicon-32x32.png
+/* * Data converted from /home/ros/esp/squeezelite-MuseLuxe/components/wifi-manager/webapp/webpack/dist/favicon-32x32.png
  */
 .data
 .section .rodata.embedded

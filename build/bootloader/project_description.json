@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "/home/ros/esp/esp-idf/components/bootloader/subproject",
-    "build_dir":          "/home/ros/esp/squeezelite-esp32ML/build/bootloader",
-    "config_file":        "/home/ros/esp/squeezelite-esp32ML/sdkconfig",
+    "build_dir":          "/home/ros/esp/squeezelite-MuseLuxe/build/bootloader",
+    "config_file":        "/home/ros/esp/squeezelite-MuseLuxe/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",

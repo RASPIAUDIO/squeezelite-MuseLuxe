@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ros/esp/squeezelite-esp32ML/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("/home/ros/esp/squeezelite-MuseLuxe/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 
 endif()
 

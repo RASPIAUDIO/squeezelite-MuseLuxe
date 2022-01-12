@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/esp/squeezelite-esp32ML/components/tools
+# Install script for directory: /home/ros/esp/squeezelite-MuseLuxe/components/tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/home/ros/esp/squeezelite-esp32ML/build/CMakeFiles/bootloader
-/home/ros/esp/squeezelite-esp32ML/build/CMakeFiles/bootloader.rule
-/home/ros/esp/squeezelite-esp32ML/build/CMakeFiles/bootloader-complete.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/home/ros/esp/squeezelite-esp32ML/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/CMakeFiles/bootloader
+/home/ros/esp/squeezelite-MuseLuxe/build/CMakeFiles/bootloader.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/CMakeFiles/bootloader-complete.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/ros/esp/squeezelite-MuseLuxe/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

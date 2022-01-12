@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/esp/squeezelite-esp32ML/components/codecs
+# Install script for directory: /home/ros/esp/squeezelite-MuseLuxe/components/codecs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

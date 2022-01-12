@@ -1,4 +1,4 @@
-/* * Data converted from /home/ros/esp/squeezelite-esp32ML/components/wifi-manager/webapp/webpack/dist/js/index.0e064e.bundle.js.gz
+/* * Data converted from /home/ros/esp/squeezelite-MuseLuxe/components/wifi-manager/webapp/webpack/dist/js/index.0e064e.bundle.js.gz
  */
 .data
 .section .rodata.embedded

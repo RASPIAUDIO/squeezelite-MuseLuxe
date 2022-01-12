@@ -348,8 +348,8 @@ void register_default_nvs(){
 //============== Muse  ==========================================	
 	ESP_LOGD(TAG,"Registering default Audio control board type %s, value ","actrls_config");	
 	strcpy(boutons, "[");
-        strcat(boutons, "{\"gpio\":32, \"type\":\"BUTTON_LOW\", \"debounce\":10, \"normal\":{\"pressed\":\"ACTRLS_VOLDOWN\"}}");
-        strcat(boutons, ",{\"gpio\":19, \"type\":\"BUTTON_LOW\",\"debounce\":40, \"normal\":{\"pressed\":\"ACTRLS_VOLUP\"}}");
+        strcat(boutons, "{\"gpio\":32, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":10, \"normal\":{\"pressed\":\"ACTRLS_VOLDOWN\"}}");
+        strcat(boutons, ",{\"gpio\":19, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"normal\":{\"pressed\":\"ACTRLS_VOLUP\"}}");
         strcat(boutons, "]");	
 	store_nvs_value(NVS_TYPE_STR,"boutons", boutons);
         config_set_default(NVS_TYPE_STR, "actrls_config", "boutons", 0);

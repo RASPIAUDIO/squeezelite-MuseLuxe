@@ -1,4 +1,4 @@
-/* * Data converted from /home/ros/esp/squeezelite-esp32ML/components/squeezelite/vu.data
+/* * Data converted from /home/ros/esp/squeezelite-MuseLuxe/components/squeezelite/vu.data
  */
 .data
 .section .rodata.embedded
