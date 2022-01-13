@@ -353,7 +353,7 @@ void register_default_nvs(){
         strcat(boutons, "]");	
 	store_nvs_value(NVS_TYPE_STR,"boutons", boutons);
         config_set_default(NVS_TYPE_STR, "actrls_config", "boutons", 0);
-	store_nvs_value(NVS_TYPE_STR,"actrls_config", "boutons");
+	//store_nvs_value(NVS_TYPE_STR,"actrls_config", "boutons");
 	
 //================================================================	
 	
