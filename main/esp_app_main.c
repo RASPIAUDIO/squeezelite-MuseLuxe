@@ -260,7 +260,7 @@ const char * get_certificate(){
 #define DEFAULT_NAME_WITH_MAC(var,defval) char var[strlen(defval)+sizeof(macStr)]; strcpy(var,defval); strcat(var,macStr)
 void register_default_nvs(){
 	uint8_t mac[6];
-	static char boutons[200];
+	static char boutons[450];
 	char macStr[LOCAL_MAC_SIZE+1];
 	char default_command_line[strlen(CONFIG_DEFAULT_COMMAND_LINE)+sizeof(macStr)];
 
@@ -350,7 +350,10 @@ void register_default_nvs(){
 	strcpy(boutons, "[");
         strcat(boutons, "{\"gpio\":32, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":10, \"normal\":{\"pressed\":\"ACTRLS_VOLDOWN\"}}");
         strcat(boutons, ",{\"gpio\":19, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"normal\":{\"pressed\":\"ACTRLS_VOLUP\"}}");
+   
+        strcat(boutons, ",{\"gpio\":12, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"longpress\":1000, \"normal\":{\"pressed\":\"ACTRLS_TOGGLE\"},\"longpress\":{\"pressed\":\"ACTRLS_POWER\"}}");
         strcat(boutons, "]");	
+        printf("********* %s\n",boutons);
 	store_nvs_value(NVS_TYPE_STR,"boutons", boutons);
         config_set_default(NVS_TYPE_STR, "actrls_config", "boutons", 0);
 	//store_nvs_value(NVS_TYPE_STR,"actrls_config", "boutons");
