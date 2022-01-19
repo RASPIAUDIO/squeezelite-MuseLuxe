@@ -351,7 +351,7 @@ void register_default_nvs(){
         strcat(boutons, "{\"gpio\":32, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":10, \"normal\":{\"pressed\":\"ACTRLS_VOLDOWN\"}}");
         strcat(boutons, ",{\"gpio\":19, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"normal\":{\"pressed\":\"ACTRLS_VOLUP\"}}");
    
-        strcat(boutons, ",{\"gpio\":12, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"longpress\":1000, \"normal\":{\"pressed\":\"ACTRLS_TOGGLE\"},\"longpress\":{\"pressed\":\"ACTRLS_POWER\"}}");
+        strcat(boutons, ",{\"gpio\":12, \"type\":\"BUTTON_LOW\", \"pull\":true, \"debounce\":40, \"long_press\":1000, \"normal\":{\"pressed\":\"ACTRLS_TOGGLE\"},\"longpress\":{\"pressed\":\"ACTRLS_POWER\"}}");
         strcat(boutons, "]");	
         printf("********* %s\n",boutons);
 	store_nvs_value(NVS_TYPE_STR,"boutons", boutons);
@@ -381,15 +381,22 @@ void register_default_nvs(){
 	snprintf(number_buffer,sizeof(number_buffer)-1,"%d",OTA_TASK_PRIOTITY);
 	ESP_LOGD(TAG,"Registering default value for key %s, value %s", "ota_prio", number_buffer);
 	config_set_default(NVS_TYPE_STR, "ota_prio", number_buffer, 0);
-
+//*********************************  Muse  *********************************
 	ESP_LOGD(TAG,"Registering default value for key %s, value %s", "display_config", CONFIG_DISPLAY_CONFIG);
-	config_set_default(NVS_TYPE_STR, "display_config", CONFIG_DISPLAY_CONFIG, 0);
-	
+//	config_set_default(NVS_TYPE_STR, "display_config", CONFIG_DISPLAY_CONFIG, 0);
+        config_set_default(NVS_TYPE_STR, "display_config", "I2C,width=128,heigth=64,address=120,driver=SH1106", 0);
+//**************************************************************************	
 	ESP_LOGD(TAG,"Registering default value for key %s, value %s", "eth_config", CONFIG_ETH_CONFIG);
 	config_set_default(NVS_TYPE_STR, "eth_config", CONFIG_ETH_CONFIG, 0);
 	
+	
+//*********************************  Muse  *********************************	
 	ESP_LOGD(TAG,"Registering default value for key %s, value %s", "i2c_config", CONFIG_I2C_CONFIG);
-	config_set_default(NVS_TYPE_STR, "i2c_config", CONFIG_I2C_CONFIG, 0);
+//	config_set_default(NVS_TYPE_STR, "i2c_config", CONFIG_I2C_CONFIG, 0);
+        config_set_default(NVS_TYPE_STR, "i2c_config", "scl=23,sda=18,port=1", 0);
+//**************************************************************************
+
+
 	
 	ESP_LOGD(TAG,"Registering default value for key %s, value %s", "spi_config", CONFIG_SPI_CONFIG);
 	config_set_default(NVS_TYPE_STR, "spi_config", CONFIG_SPI_CONFIG, 0);
@@ -422,7 +429,7 @@ void register_default_nvs(){
 	config_set_default(NVS_TYPE_STR, "bat_config", "", 0);
 			
 	ESP_LOGD(TAG,"Registering default value for key %s", "metadata_config");
-	config_set_default(NVS_TYPE_STR, "metadata_config", "", 0);
+	config_set_default(NVS_TYPE_STR, "metadata_config", "format=%artist%---%title%", 0);
 	
 	ESP_LOGD(TAG,"Registering default value for key %s", "telnet_enable");
 	config_set_default(NVS_TYPE_STR, "telnet_enable", "", 0);
